@@ -1,5 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto+Condensed');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.header {
+  background-color: #82bd82;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  padding: 10px;
+}
+
+.logo {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+}
+
+#headerButton {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #ffeb3b;
+  font-size: 35px;
+  width: 70px;
+  height: 40px;
+  border-radius: 15px;
+  border: 0;
+}
+
+h1, .deliveryTime, .priceHolder {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.page {
+  width: 90%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation {
+  width: 25%;
+  background-color: red;
+}
+
+.productPage {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  width: 100%;
+  height: 300px;
+  background-color: green;
+}
+
+
+.productHeader {
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #cacaca6b;
+}
+
+.productList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.oneProduct {
+  background-color: white;
+  width: 19%;
+  margin: 1%;
+  margin-right: 0%;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #cacaca;
+}
+
+.productTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.name, .name2 {
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.imageHolder {
+  width: 100%;
+  height: 135px;
+  align-self: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.description {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.oneProduct:hover .description {
+  display: block;
+  z-index: 3;
+}
+
+.oneProduct:hover .name {
+  display: none;
+}
+
+.oneProduct:hover .list {
+  display: none;
+}
+
+.oneProduct:hover .imageHolder {
+display: none;
+}
+
+.list{
+  margin: 5px;
+}
+
+.listItem {
+  font-size: 14px;
+  list-style-type: circle;
+}
+
+.priceHolder {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 20px;
+}
+
+.button {
+  background-color: #82bd82;
+  font-size: 15px;
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  border: 0;
+}
+
+.button:hover {
+  background-color: #ffeb3b;
+}
+
+.deliveryTime {
+  text-align: center;
+  color: gray;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (min-width: 600px) and (max-width: 1024px)  {
+  .header {
+    display: flex;
+  }
+  .page {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .oneProduct {
+    width: 40%;
+  }
+  .name, .name2 {
+    text-align: center;
+    font-size: 24px;
+  }
+  .navigation {
+    display: none;
+  }
+  .productPage {
+    width: 100%;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 600px)  {
+  .header {
+    display: flex;
+  }
+  .page {
+    width: 100%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .productPage {
+    width: 100%;
+  }
+  .productList {
+    width: 100%;
+  }
+  .oneProduct {
+    width: 90%;
+  }
+  .imageHolder {
+    width: 100%;
+    height: 150px;
+  }
+  .name, .name2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .navigation {
+    display: none;
+  }
 }
