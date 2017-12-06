@@ -14,7 +14,7 @@ class Product extends React.Component {
               {this.props.prodName}
             </h1>
 
-            <div className="description">
+            {/* <div className="description">
               <h1 className="name2">
                 {this.props.prodName}
               </h1>
@@ -37,10 +37,10 @@ class Product extends React.Component {
               <li className="listItem">
                 {this.props.prodNumberInPack}
               </li>
-            </div>
+            </div> */}
           </div>
 
-          <div className="productBottom">
+          {/* <div className="productBottom">
             <div className="priceHolder">
               <div className="price">
                 {this.props.prodPrice} kr
@@ -54,7 +54,7 @@ class Product extends React.Component {
             <div className="deliveryTime">
               {this.props.prodDeliveryTime}
             </div>
-          </div>
+          </div> */}
 
         </div>
     )

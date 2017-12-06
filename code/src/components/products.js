@@ -1,9 +1,25 @@
 import React from "react"
 import Product from "./product"
 
-const productsJson = require("./../products.json")
-
 class Products extends React.Component {
+
+constructor(props) {
+  super(props)
+  this.state = {
+    products: []
+  }
+}
+
+componentDidMount() {
+    fetch("https://api.tictail.com/v1.26/stores/5znv/products").then((response) => {
+      return response.json()
+    }).then((json) => {
+    console.log(json)
+    this.setState({
+      products: json
+    })
+  })
+}
 
   render() {
     return (
@@ -19,22 +35,14 @@ class Products extends React.Component {
           </div>
 
           <div className="productHeader">
-            Visar {productsJson.products.length} produkter
+            {/* Visar {productsJson.products.length} produkter */}
           </div>
 
           <div className="productList">
 
-            {productsJson.products.map((item) => {
+            {this.state.products.map((item) => {
               return <Product
-                prodName={item.name}
-                prodPrice={item.price}
-                prodType={item.type}
-                prodSize={item.size}
-                prodNumberInPack={item.numberInPack}
-                prodDeliveryTime={item.deliveryTime}
-                prodImage={item.image}
-                prodSubstance={item.substance}
-                prodDescription={item.description}
+                prodName={item.title}
               />
             })}
 
