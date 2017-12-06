@@ -2,16 +2,16 @@ import React from "react"
 
 class Hero extends React.Component {
 
-  componentDidMount() {
-    fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
-      return response.json()
-    }).then((json) => {
-    console.log(json)
-    this.setState({
-      store: json
-    })
-  })
- }
+ //  componentDidMount() {
+ //    fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
+ //      return response.json()
+ //    }).then((json) => {
+ //    console.log(json)
+ //    this.setState({
+ //      store: json
+ //    })
+ //  })
+ // }
 
 
   render() {
