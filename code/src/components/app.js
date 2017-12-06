@@ -2,6 +2,7 @@ import React from "react"
 import Products from "./products"
 import "./../index.css"
 import Categories from "./categories"
+import Store from "./store"
 
 const productsJson = require("./../products.json")
 
@@ -22,7 +23,7 @@ class App extends React.Component {
             <i className="fa fa-shopping-cart" />
           </button>
         </div>
-
+        <Store />
         <Categories />
         <Products />
 

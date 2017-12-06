@@ -22,7 +22,7 @@ class Categories extends React.Component {
     return (
       <div className="categories">
         <h1>Kategorier</h1>
-      {this.state.categories.map((item) => {
+        {this.state.categories.map((item) => {
         return <Category
           title={item.title} />
         })}
