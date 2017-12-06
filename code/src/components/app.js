@@ -37,13 +37,12 @@ class App extends React.Component {
             {this.state.cart}
           </button>
         </div>
-        <Store />
-        <Categories />
 
         <div className="page">
 
           <div className="navigation">
-            Navigation
+            <Categories />
+            <Store />
           </div>
 
           <div className="productPage">
