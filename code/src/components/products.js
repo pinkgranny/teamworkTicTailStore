@@ -3,7 +3,7 @@ import Product from "./product"
 
 const productsJson = require("./../products.json")
 
-class Page extends React.Component {
+class Products extends React.Component {
 
   render() {
     return (
@@ -46,4 +46,4 @@ class Page extends React.Component {
 
 }
 
-export default Page
+export default Products

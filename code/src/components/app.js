@@ -1,5 +1,5 @@
 import React from "react"
-import Page from "./page"
+import Products from "./products"
 import "./../index.css"
 
 const productsJson = require("./../products.json")
@@ -22,7 +22,7 @@ class App extends React.Component {
           </button>
         </div>
 
-        <Page />
+        <Products />
 
       </div>
     )
