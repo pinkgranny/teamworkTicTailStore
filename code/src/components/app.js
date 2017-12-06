@@ -57,7 +57,8 @@ class App extends React.Component {
           </label>
 
           <div className="cartList">
-            {this.state.cart}
+            {this.state.cart.map(item =>
+              <li>{item}</li>)}
           </div>
 
         </div>
