@@ -26,7 +26,7 @@ class Product extends React.Component {
         <div className="productBottom">
           <div className="priceHolder">
             <div className="price">
-              {this.props.prodPrice} kr
+              {this.props.prodPrice}
             </div>
 
             <button onClick={()=> {
