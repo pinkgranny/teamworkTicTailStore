@@ -16,6 +16,8 @@ class App extends React.Component {
 
   updateCart(productId) {
     this.setState({
+      myArray: [...this.state.myArray, 'new value'] })
+    this.setState({
       cart: productId
     })
   }
@@ -38,8 +40,21 @@ class App extends React.Component {
         </div>
 
         <Categories />
-        <Products updateProducts={this.updateCart.bind(this)} />
 
+        <div className="page">
+
+          <div className="navigation">
+            Navigation
+          </div>
+
+          <div className="productPage">
+            <div className="hero">
+              Hero
+            </div>
+
+            <Products updateProducts={this.updateCart.bind(this)} />
+          </div>
+        </div>
       </div>
     )
   }
