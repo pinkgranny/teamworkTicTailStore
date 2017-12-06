@@ -47,12 +47,13 @@ class App extends React.Component {
             Logo
           </div>
 
-          <input id="cartBox" type="checkbox" className="cartBox-cb" />
+          <input id="cartBox_id" type="checkbox" className="cartBox" />
 
-          <label className="cartButton" For="cartBox">
-            <button id="headerButton">
+          <label className="cartButton" htmlFor="cartBox_id">
+            <div className="cartButton">
               <i className="fa fa-shopping-cart" />
-            </button>
+              {this.state.cart.length} products
+            </div>
           </label>
 
           <div className="cartList">
