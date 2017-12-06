@@ -26,9 +26,7 @@ class App extends React.Component {
 
   updateCart(productId) {
     this.setState({
-      myArray: [...this.state.myArray, 'new value'] })
-    this.setState({
-      cart: productId
+      cart: [...this.state.cart, productId]
     })
   }
 
@@ -43,10 +41,19 @@ class App extends React.Component {
           <div className="logo">
             Logo
           </div>
-          <button id="headerButton">
-            <i className="fa fa-shopping-cart" />
+
+          <input id="cartBox" type="checkbox" className="cartBox-cb" />
+
+          <label className="cartButton" For="cartBox">
+            <button id="headerButton">
+              <i className="fa fa-shopping-cart" />
+            </button>
+          </label>
+
+          <div className="cartList">
             {this.state.cart}
-          </button>
+          </div>
+
         </div>
 
         <div className="page">
