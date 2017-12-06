@@ -3,6 +3,7 @@ import Products from "./products"
 import "./../index.css"
 import Categories from "./categories"
 import Store from "./store"
+import Hero from "./hero"
 
 class App extends React.Component {
 
@@ -10,7 +11,11 @@ class App extends React.Component {
     super(props)
     this.state = {
       cart: [],
-      store: {},
+      store: {
+        wallpapers: {
+          iphone: {}
+        }
+      },
     }
   }
 
@@ -65,7 +70,7 @@ class App extends React.Component {
 
           <div className="productPage">
             <div className="hero">
-              {/* <Hero hero={this.state.store.wallpapers.iphone.url} /> */}
+              <Hero hero={this.state.store.wallpapers.iphone.url} />
             </div>
 
             <Products updateProducts={this.updateCart.bind(this)} />
