@@ -21,7 +21,7 @@ class Store extends React.Component {
   render() {
     return (
       <div className="store">
-        <h1>Stores</h1>
+        <h1>store</h1>
       </div>
     )
   }
