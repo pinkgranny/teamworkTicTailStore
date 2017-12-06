@@ -44,13 +44,12 @@ class App extends React.Component {
           </div>
 
         </div>
-        <Store />
-        <Categories />
 
         <div className="page">
 
           <div className="navigation">
-            Navigation
+            <Categories />
+            <Store />
           </div>
 
           <div className="productPage">
