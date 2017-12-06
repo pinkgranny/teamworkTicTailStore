@@ -2,8 +2,7 @@ import React from "react"
 import Products from "./products"
 import "./../index.css"
 import Categories from "./categories"
-
-const productsJson = require("./../products.json")
+import Store from "./store"
 
 class App extends React.Component {
 
@@ -38,7 +37,7 @@ class App extends React.Component {
             {this.state.cart}
           </button>
         </div>
-
+        <Store />
         <Categories />
 
         <div className="page">
