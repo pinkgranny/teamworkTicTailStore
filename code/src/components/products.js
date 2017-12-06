@@ -43,6 +43,9 @@ componentDidMount() {
             {this.state.products.map((item) => {
               return <Product
                 prodName={item.title}
+                prodImage={item.images[0].url}
+                prodPrice={item.price}
+                prodOrgPrice={item.original_price}
               />
             })}
 

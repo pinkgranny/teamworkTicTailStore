@@ -19,12 +19,12 @@ class Product extends React.Component {
                 {this.props.prodName}
               </h1>
               {this.props.prodDescription}
-            </div>
+            </div> */}
 
-            <div className="imageHolder" style={{backgroundImage:`url(${this.props.prodImage})` }}>
-            </div>
+{            <div className="imageHolder" style={{backgroundImage:`url(${this.props.prodImage})` }}>
+            </div>}
 
-            <div className="list">
+            {/* <div className="list">
               <li className="listItem">
                 {this.props.prodType}
               </li>
@@ -40,7 +40,7 @@ class Product extends React.Component {
             </div> */}
           </div>
 
-          {/* <div className="productBottom">
+          <div className="productBottom">
             <div className="priceHolder">
               <div className="price">
                 {this.props.prodPrice} kr
@@ -52,9 +52,9 @@ class Product extends React.Component {
             </div>
 
             <div className="deliveryTime">
-              {this.props.prodDeliveryTime}
+              {this.props.prodOrgPrice}
             </div>
-          </div> */}
+          </div>
 
         </div>
     )
