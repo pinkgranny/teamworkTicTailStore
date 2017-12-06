@@ -7,6 +7,19 @@ const productsJson = require("./../products.json")
 
 class App extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      cart: []
+    }
+  }
+
+  updateCart(productId) {
+    this.setState({
+      cart: productId
+    })
+  }
+
   render() {
     return (
 
@@ -20,11 +33,12 @@ class App extends React.Component {
           </div>
           <button id="headerButton">
             <i className="fa fa-shopping-cart" />
+            {this.state.cart}
           </button>
         </div>
 
         <Categories />
-        <Products />
+        <Products updateProducts={this.updateCart.bind(this)} />
 
       </div>
     )

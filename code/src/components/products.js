@@ -22,6 +22,7 @@ class Products extends React.Component {
 }
 
   render() {
+    console.log(this)
     return (
       <div className="page">
 
@@ -42,11 +43,13 @@ class Products extends React.Component {
 
             {this.state.products.map((item) => {
               return <Product
+                updateProducts={this.props.updateProducts}
                 prodName={item.title}
                 prodImage={item.images[0].url}
                 prodDescription={item.description}
                 prodPrice={item.price}
                 prodOrgPrice={item.original_price}
+                prodId={item.id}
               />
             })}
 
