@@ -6,11 +6,20 @@ body {
   font-family: sans-serif;
 }
 
+.cartButton {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  background-color: #ffeb3b;
+  font-size: 14px;
+  height: 28px;
+  border: 0;
+}
+
 .cartList {
   display: none;
 }
 
-.cartBox-cb {
+.cartBox {
   display: none;
 }
 
@@ -37,16 +46,6 @@ body {
   font-size: 30px;
   font-weight: bold;
   color: black;
-}
-
-#headerButton {
-  font-family: 'Roboto Condensed', sans-serif;
-  background-color: #ffeb3b;
-  font-size: 35px;
-  width: 70px;
-  height: 40px;
-  border-radius: 15px;
-  border: 0;
 }
 
 h1, .deliveryTime, .priceHolder {
