@@ -3,14 +3,30 @@ import Products from "./products"
 import "./../index.css"
 import Categories from "./categories"
 import Store from "./store"
+import Hero from "./hero"
 
 class App extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      cart: []
+      cart: [],
+      store: {
+        wallpapers: {
+          iphone: {}
+        }
+      },
     }
+  }
+
+  componentDidMount() {
+    fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
+      return response.json()
+    }).then((json) => {
+      console.log(json)
+      this.setState({
+        store:json })
+    })
   }
 
   updateCart(productId) {
@@ -50,12 +66,12 @@ class App extends React.Component {
 
           <div className="navigation">
             <Categories />
-            <Store />
+            <Store name={this.state.store.name} />
           </div>
 
           <div className="productPage">
             <div className="hero">
-              Hero
+              <Hero hero={this.state.store.wallpapers.iphone.url} />
             </div>
 
             <Products updateProducts={this.updateCart.bind(this)} />

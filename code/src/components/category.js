@@ -10,7 +10,7 @@ class Category extends React.Component {
       <div className="oneCategory">
 
         <h1 className="name">
-          {this.props.title}
+          <a href="url"> {this.props.title}</a>
         </h1>
 
       </div>
