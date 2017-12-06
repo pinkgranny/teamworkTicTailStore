@@ -4,8 +4,6 @@ import "./../index.css"
 import Categories from "./categories"
 import Store from "./store"
 
-const productsJson = require("./../products.json")
-
 class App extends React.Component {
 
   constructor(props) {
