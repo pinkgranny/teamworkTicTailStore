@@ -1,0 +1,7 @@
+.hero {
+  height: 300px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
