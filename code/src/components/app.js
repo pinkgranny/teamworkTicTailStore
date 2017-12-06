@@ -9,15 +9,24 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      cart: []
+      cart: [],
+      store: {},
     }
+  }
+
+  componentDidMount() {
+    fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
+      return response.json()
+    }).then((json) => {
+      console.log(json)
+      this.setState({
+        store:json })
+    })
   }
 
   updateCart(productId) {
     this.setState({
-      myArray: [...this.state.myArray, 'new value'] })
-    this.setState({
-      cart: productId
+      cart: [...this.state.cart, productId]
     })
   }
 
@@ -32,22 +41,31 @@ class App extends React.Component {
           <div className="logo">
             Logo
           </div>
-          <button id="headerButton">
-            <i className="fa fa-shopping-cart" />
+
+          <input id="cartBox" type="checkbox" className="cartBox-cb" />
+
+          <label className="cartButton" For="cartBox">
+            <button id="headerButton">
+              <i className="fa fa-shopping-cart" />
+            </button>
+          </label>
+
+          <div className="cartList">
             {this.state.cart}
-          </button>
+          </div>
+
         </div>
 
         <div className="page">
 
           <div className="navigation">
             <Categories />
-            <Store />
+            <Store name={this.state.store.name} />
           </div>
 
           <div className="productPage">
             <div className="hero">
-              Hero
+              {/* <Hero hero={this.state.store.wallpapers.iphone.url} /> */}
             </div>
 
             <Products updateProducts={this.updateCart.bind(this)} />
