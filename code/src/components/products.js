@@ -3,14 +3,14 @@ import Product from "./product"
 
 class Products extends React.Component {
 
-constructor(props) {
-  super(props)
-  this.state = {
-    products: []
+  constructor(props) {
+    super(props)
+    this.state = {
+      products: []
+    }
   }
-}
 
-componentDidMount() {
+  componentDidMount() {
     fetch("https://api.tictail.com/v1.26/stores/5znv/products").then((response) => {
       return response.json()
     }).then((json) => {
@@ -35,7 +35,7 @@ componentDidMount() {
           </div>
 
           <div className="productHeader">
-            {/* Visar {productsJson.products.length} produkter */}
+            Visar {this.state.products.length} produkter
           </div>
 
           <div className="productList">
@@ -44,6 +44,7 @@ componentDidMount() {
               return <Product
                 prodName={item.title}
                 prodImage={item.images[0].url}
+                prodDescription={item.description}
                 prodPrice={item.price}
                 prodOrgPrice={item.original_price}
               />
