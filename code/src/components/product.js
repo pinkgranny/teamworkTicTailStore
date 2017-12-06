@@ -3,7 +3,7 @@ import React from "react"
 class Product extends React.Component {
 
   render() {
-        console.log(this.props.updateProducts)
+    console.log(this.props.updateProducts)
     return (
       <div className="oneProduct">
 
@@ -26,13 +26,14 @@ class Product extends React.Component {
         <div className="productBottom">
           <div className="priceHolder">
             <div className="price">
-              {this.props.prodPrice} kr
+              {this.props.prodPrice}
             </div>
 
             <button onClick={()=> {
               this.props.updateProducts(this.props.prodId)
-            }} className="button">
-            Köp
+            }}
+              className="button">
+              Köp
             </button>
           </div>
 

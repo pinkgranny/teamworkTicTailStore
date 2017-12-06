@@ -6,6 +6,21 @@ body {
   font-family: sans-serif;
 }
 
+.cartList {
+  display: none;
+}
+
+.cartBox-cb {
+  display: none;
+}
+
+.cartBox:checked ~ .cartList {
+  display: block;
+  color: white;
+  background-color: blue;
+}
+
+
 .header {
   background-color: #82bd82;
   height: 40px;
@@ -47,7 +62,7 @@ h1, .deliveryTime, .priceHolder {
 
 .navigation {
   width: 25%;
-  background-color: red;
+  background-color: lightgreen;
 }
 
 .productPage {

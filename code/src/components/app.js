@@ -4,20 +4,29 @@ import "./../index.css"
 import Categories from "./categories"
 import Store from "./store"
 
-const productsJson = require("./../products.json")
-
 class App extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      cart: []
+      cart: [],
+      store: {},
     }
+  }
+
+  componentDidMount() {
+    fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
+      return response.json()
+    }).then((json) => {
+      console.log(json)
+      this.setState({
+        store:json })
+    })
   }
 
   updateCart(productId) {
     this.setState({
-      cart: productId
+      cart: [...this.state.cart, productId]
     })
   }
 
@@ -32,15 +41,36 @@ class App extends React.Component {
           <div className="logo">
             Logo
           </div>
-          <button id="headerButton">
-            <i className="fa fa-shopping-cart" />
-            {this.state.cart}
-          </button>
-        </div>
-        <Store />
-        <Categories />
-        <Products updateProducts={this.updateCart.bind(this)} />
 
+          <input id="cartBox" type="checkbox" className="cartBox-cb" />
+
+          <label className="cartButton" For="cartBox">
+            <button id="headerButton">
+              <i className="fa fa-shopping-cart" />
+            </button>
+          </label>
+
+          <div className="cartList">
+            {this.state.cart}
+          </div>
+
+        </div>
+
+        <div className="page">
+
+          <div className="navigation">
+            <Categories />
+            <Store name={this.state.store.name} />
+          </div>
+
+          <div className="productPage">
+            <div className="hero">
+              {/* <Hero hero={this.state.store.wallpapers.iphone.url} /> */}
+            </div>
+
+            <Products updateProducts={this.updateCart.bind(this)} />
+          </div>
+        </div>
       </div>
     )
   }
