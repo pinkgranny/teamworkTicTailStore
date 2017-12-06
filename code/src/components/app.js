@@ -65,8 +65,10 @@ class App extends React.Component {
         <div className="page">
 
           <div className="navigation">
+            <div className="storeName">
+              <Store name={this.state.store.name} />
+            </div>
             <Categories />
-            <Store name={this.state.store.name} />
           </div>
 
           <div className="productPage">
