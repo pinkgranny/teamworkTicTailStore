@@ -17,6 +17,13 @@ body {
 
 .cartList {
   display: none;
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  margin-left: 0;
+  padding: 0;
+  width: 200px;
+
 }
 
 .cartBox {
@@ -25,8 +32,8 @@ body {
 
 .cartBox:checked ~ .cartList {
   display: block;
-  color: white;
-  background-color: blue;
+  color: black;
+  background-color: white;
 }
 
 
