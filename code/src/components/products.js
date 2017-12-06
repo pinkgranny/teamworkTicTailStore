@@ -21,6 +21,10 @@ class Products extends React.Component {
     })
   }
 
+  formatPrice(price) {
+    return (price/100).toFixed(2)
+  }
+
   render() {
     console.log(this)
     return (
@@ -36,8 +40,8 @@ class Products extends React.Component {
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}
-              prodPrice={item.price}
-              prodOrgPrice={item.original_price}
+              prodPrice={this.formatPrice(item.price)}
+              prodOrgPrice={this.formatPrice(item.original_price)}
               prodId={item.id} />)}
         </div>
       </div>
