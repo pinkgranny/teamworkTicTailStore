@@ -1,5 +1,6 @@
 import React from "react"
 import Product from "./product"
+import "./../page.css"
 
 const productsJson = require("./../products.json")
 

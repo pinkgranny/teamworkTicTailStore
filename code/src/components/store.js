@@ -1,4 +1,5 @@
 import React from "react"
+import "./../store.css"
 
 class Store extends React.Component {
   constructor(props) {
@@ -8,15 +9,6 @@ class Store extends React.Component {
       // description: null,
     }
   }
-
-  // componentDidMount() {
-  //   fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
-  //     return response.json()
-  //   }).then((json) => {
-  //     console.log(json)
-  //     this.setState(json)
-  //   })
-  // }
 
   render() {
     return (
