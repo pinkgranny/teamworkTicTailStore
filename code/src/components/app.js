@@ -28,8 +28,7 @@ class App extends React.Component {
       return response.json()
     }).then((json) => {
       console.log(json)
-      this.setState({
-        store:json })
+      this.setState({ store: json })
     })
   }
 
@@ -64,9 +63,7 @@ class App extends React.Component {
               {this.state.cart.map(item =>
                 <li>
                   <Cart
-                    prodName={item.id}
-                    // prodPrice={this.formatPrice(item.price)}
-                  />
+                    prodName={item.id} />
                 </li>)}
             </div>
 
@@ -85,8 +82,6 @@ class App extends React.Component {
               <div className="hero">
                 <Hero hero={this.state.store.wallpapers.iphone.url} />
               </div>
-
-
 
               <Route path="/:product-page" component={ProductPage} />
 =======
