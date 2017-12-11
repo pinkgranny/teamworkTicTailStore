@@ -1,5 +1,5 @@
 import React from "react"
-import "./../category.css"
+import "./category.css"
 
 console.log("I'm in Category Component")
 

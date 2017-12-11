@@ -1,5 +1,5 @@
 import React from "react"
-import "./../store.css"
+import "./store.css"
 
 class Store extends React.Component {
   constructor(props) {
