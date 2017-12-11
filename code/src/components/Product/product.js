@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./product.css"
 
 class Product extends React.Component {
@@ -7,6 +8,7 @@ class Product extends React.Component {
     console.log(this.props.updateProducts)
     return (
       <div className="oneProduct">
+        <Link to={`/${this.props.title}`}>
 
         <div className="productTop">
           <h1 className="name">
@@ -43,6 +45,7 @@ class Product extends React.Component {
             {this.props.prodOrgPrice}
           </div>
         </div>
+        </Link>
 
       </div>
     )

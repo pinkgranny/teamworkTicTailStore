@@ -7,6 +7,7 @@ import Store from "./Store/store"
 import Hero from "./Hero/hero"
 import Cart from "./Cart/cart"
 import Filter from "./Product/filterList"
+import ProductPage from "./Product/product-page"
 
 class App extends React.Component {
 
@@ -87,6 +88,7 @@ class App extends React.Component {
 
               <Route exact path="/" component={Products} updateProducts={this.updateCart.bind(this)} />
               <Route path="/:cate" component={Filter} updateProducts={this.updateCart.bind(this)} />
+              <Route path="/:product-page" component={ProductPage} />
             </div>
           </div>
         </div>
