@@ -5,27 +5,20 @@ class Filter extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: [],
-      kategory: ""
+      products: []
     }
   }
 
   componentDidMount() {
     console.log("the next row is the category")
     // console.log(this.props.match.params.cate)
-    const kategori = this.props.match.params.cate
-    console.log(kategori)
     fetch("https://api.tictail.com/v1.26/stores/5znv/products").then((response) => {
       return response.json()
     }).then((json) => {
       // console.log(json)
-      const products = json.filter(product => {
-      const categories = product.categories.map(category => category.title)
-        return categories.includes(kategori)
-      })
+
       this.setState({
-        products: products,
-        kategory: kategori
+        products: json
       })
     })
   }
@@ -36,14 +29,19 @@ class Filter extends React.Component {
 
   render() {
     console.log(this)
+    const kategori = this.props.match.params.cate
+    const products = this.state.products.filter(product => {
+      const categories = product.categories.map(category => category.title)
+      return categories.includes(kategori)
+    })
     return (
       <div className="productWrap">
-        {/* <div className="productHeader">
-          Visar {this.props.categories.count} produkter
-        </div> */}
+        <div className="productHeader">
+          Visar {products.length} produkter
+        </div>
 
         <div className="productList">
-          {this.state.products.map(item =>
+          {products.map(item =>
             <Product
               updateProducts={this.props.updateProducts}
               prodName={item.title}

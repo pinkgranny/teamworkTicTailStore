@@ -109,9 +109,9 @@ h1, .deliveryTime, .priceHolder {
 }
 
 /*DO WE NEED THIS ADJUSTMENT? IF WE DONT HAVE 2, 6, or 9 etc */
-/*.oneProduct:last-child {
+.oneProduct:last-child {
   margin-right: 33.8%;
-}*/
+}
 
 .productTop {
   display: flex;
