@@ -22,7 +22,7 @@ class Products extends React.Component {
   }
 
   formatPrice(price) {
-    return (price/100).toFixed(2)
+    return (price / 100).toFixed(2)
   }
 
   render() {
@@ -42,7 +42,8 @@ class Products extends React.Component {
               prodDescription={item.description}
               prodPrice={this.formatPrice(item.price)}
               prodOrgPrice={this.formatPrice(item.original_price)}
-              prodId={item.id} />)}
+              prodId={item.id}
+              category={item.categories[0].title} />)}
         </div>
       </div>
     )

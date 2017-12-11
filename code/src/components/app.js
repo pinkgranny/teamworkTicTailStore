@@ -1,9 +1,10 @@
 import React from "react"
-import Products from "./products"
+import Products from "./Product/products"
 import "./../index.css"
-import Categories from "./categories"
-import Store from "./store"
-import Hero from "./hero"
+import Categories from "./Category/categories"
+import Store from "./Store/store"
+import Hero from "./Hero/hero"
+import Cart from "./Cart/cart"
 
 class App extends React.Component {
 
@@ -58,7 +59,12 @@ class App extends React.Component {
 
           <div className="cartList">
             {this.state.cart.map(item =>
-              <li>{item}</li>)}
+              <li>
+                <Cart
+                  prodName={item.id}
+                  // prodPrice={this.formatPrice(item.price)}
+                />
+              </li>)}
           </div>
 
         </div>

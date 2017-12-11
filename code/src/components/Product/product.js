@@ -1,5 +1,5 @@
 import React from "react"
-import "./../product.css"
+import "./product.css"
 
 class Product extends React.Component {
 
@@ -14,9 +14,10 @@ class Product extends React.Component {
           </h1>
 
           <div className="description">
-            <h1 className="name2">
+            <h2> Product details</h2>
+            {/* <h1 className="name2">
               {this.props.prodName}
-            </h1>
+            </h1> */}
             {this.props.prodDescription}
           </div>
 
