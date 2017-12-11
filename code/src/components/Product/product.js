@@ -21,7 +21,7 @@ class Product extends React.Component {
             {this.props.prodDescription}
           </div>
 
-{<div className="imageHolder" style={{backgroundImage:`url(${this.props.prodImage})` }}>
+          {<div className="imageHolder" style={{backgroundImage:`url(${this.props.prodImage})` }}>
           </div>}
         </div>
 
