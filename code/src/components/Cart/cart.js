@@ -9,10 +9,13 @@ class Cart extends React.Component {
         <div className="cartInfo">
           {this.props.prodName}
         </div>
+        {/* <div className="cartInfo">
+          {this.props.title}
+        </div>
 
         <div className="cartPrice">
-          {this.props.prodPrice}
-        </div>
+          {this.props.price}
+        </div> */}
       </div>
     )
   }
