@@ -30,7 +30,7 @@ class Filter extends React.Component {
   render() {
     console.log(this)
     const kategori = this.props.match.params.cate
-    const products = this.state.products.filter(product => {
+    const products = this.state.products.filter((product) => {
       const categories = product.categories.map(category => category.title)
       return categories.includes(kategori)
     })
@@ -43,7 +43,7 @@ class Filter extends React.Component {
         <div className="productList">
           {products.map(item =>
             <Product
-              updateProducts={this.props.updateProducts}
+              updateCart={this.props.updateCart}
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}

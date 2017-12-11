@@ -5,7 +5,7 @@ import "./product.css"
 class Product extends React.Component {
 
   render() {
-    console.log(this.props.updateProducts)
+    console.log(this.props.updateCart)
     return (
       <div className="oneProduct">
         <Link to={`/${this.props.title}`}>
@@ -23,8 +23,7 @@ class Product extends React.Component {
             {this.props.prodDescription}
           </div>
 
-          {<div className="imageHolder" style={{backgroundImage:`url(${this.props.prodImage})` }}>
-          </div>}
+          <div className="imageHolder" style={{ backgroundImage: `url(${this.props.prodImage})` }} />
         </div>
 
         <div className="productBottom">
@@ -33,9 +32,11 @@ class Product extends React.Component {
               {this.props.prodPrice}
             </div>
 
-            <button onClick={()=> {
-              this.props.updateProducts(this.props.prodId)
-            }}
+            <button
+              onClick={() => {
+                this.props.updateCart(this.props.prodId)
+              }
+              }
               className="button">
               Köp
             </button>
