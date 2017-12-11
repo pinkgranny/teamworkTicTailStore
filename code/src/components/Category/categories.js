@@ -21,7 +21,7 @@ class Categories extends React.Component {
   render() {
     return (
       <div className="categories">
-        <h1>Kategorier</h1>
+        <h1>Categories</h1>
         {this.state.categories.map((item) => {
         return <Category
           title={item.title}
