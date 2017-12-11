@@ -7,6 +7,7 @@ import Store from "./Store/store"
 import Hero from "./Hero/hero"
 import Cart from "./Cart/cart"
 import Filter from "./Product/filterList"
+import ProductPage from "./Product/product-page"
 
 class App extends React.Component {
 
@@ -18,7 +19,7 @@ class App extends React.Component {
         wallpapers: {
           iphone: {}
         }
-      },
+      }
     }
   }
 
@@ -27,8 +28,7 @@ class App extends React.Component {
       return response.json()
     }).then((json) => {
       console.log(json)
-      this.setState({
-        store:json })
+      this.setState({ store: json })
     })
   }
 
@@ -63,9 +63,7 @@ class App extends React.Component {
               {this.state.cart.map(item =>
                 <li>
                   <Cart
-                    prodName={item.id}
-                    // prodPrice={this.formatPrice(item.price)}
-                  />
+                    prodName={item.id} />
                 </li>)}
             </div>
 
@@ -85,8 +83,10 @@ class App extends React.Component {
                 <Hero hero={this.state.store.wallpapers.iphone.url} />
               </div>
 
-              <Route exact path="/" component={Products} updateProducts={this.updateCart.bind(this)} />
-              <Route path="/:cate" component={Filter} updateProducts={this.updateCart.bind(this)} />
+              <Route path="/:product-page" component={ProductPage} />
+              <Route exact path="/" component={Products} updateCart={this.updateCart.bind(this)} />
+              <Route path="/:cate" component={Filter} updateCart={this.updateCart.bind(this)} />
+
             </div>
           </div>
         </div>
