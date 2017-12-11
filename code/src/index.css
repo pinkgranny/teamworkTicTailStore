@@ -99,7 +99,7 @@ h1, .deliveryTime, .priceHolder {
 
 .oneProduct {
   background-color: white;
-  width: 19%;
+  width: 28%;
   margin: 1% 0;
   padding: 2%;
   display: flex;
@@ -107,6 +107,11 @@ h1, .deliveryTime, .priceHolder {
   justify-content: space-between;
   border: 1px solid #cacaca;
 }
+
+/*DO WE NEED THIS ADJUSTMENT? IF WE DONT HAVE 2, 6, or 9 etc */
+/*.oneProduct:last-child {
+  margin-right: 33.8%;
+}*/
 
 .productTop {
   display: flex;

@@ -1,4 +1,5 @@
 import React from "react"
+import { BrowserRouter, Route } from "react-router-dom"
 import Products from "./Product/products"
 import "./../index.css"
 import Categories from "./Category/categories"
@@ -38,55 +39,57 @@ class App extends React.Component {
 
   render() {
     return (
-
-      <div className="App">
-        <div className="header">
-          <div className="hamburger">
-            Hamburger
-          </div>
-          <div className="logo">
-            Logo
-          </div>
-
-          <input id="cartBox_id" type="checkbox" className="cartBox" />
-
-          <label className="cartButton" htmlFor="cartBox_id">
-            <div className="cartButton">
-              <i className="fa fa-shopping-cart" />
-              {this.state.cart.length} products
+      <BrowserRouter>
+        <div className="App">
+          <div className="header">
+            <div className="hamburger">
+              Hamburger
             </div>
-          </label>
+            <div className="logo">
+              Logo
+            </div>
 
-          <div className="cartList">
-            {this.state.cart.map(item =>
-              <li>
-                <Cart
-                  prodName={item.id}
-                  // prodPrice={this.formatPrice(item.price)}
-                />
-              </li>)}
+            <input id="cartBox_id" type="checkbox" className="cartBox" />
+
+            <label className="cartButton" htmlFor="cartBox_id">
+              <div className="cartButton">
+                <i className="fa fa-shopping-cart" />
+                {this.state.cart.length} products
+              </div>
+            </label>
+
+            <div className="cartList">
+              {this.state.cart.map(item =>
+                <li>
+                  <Cart
+                    prodName={item.id}
+                    // prodPrice={this.formatPrice(item.price)}
+                  />
+                </li>)}
+            </div>
+
           </div>
 
+          <div className="page">
+
+            <div className="navigation">
+              <div className="storeName">
+                <Store name={this.state.store.name} />
+              </div>
+              <Categories />
+            </div>
+
+            <div className="productPage">
+              <div className="hero">
+                <Hero hero={this.state.store.wallpapers.iphone.url} />
+              </div>
+
+              <Products updateProducts={this.updateCart.bind(this)} />
+              <Route path="/:cate" component={Products} updateProducts={this.updateCart.bind(this)} />
+            </div>
+          </div>
         </div>
-
-        <div className="page">
-
-          <div className="navigation">
-            <div className="storeName">
-              <Store name={this.state.store.name} />
-            </div>
-            <Categories />
-          </div>
-
-          <div className="productPage">
-            <div className="hero">
-              <Hero hero={this.state.store.wallpapers.iphone.url} />
-            </div>
-
-            <Products updateProducts={this.updateCart.bind(this)} />
-          </div>
-        </div>
-      </div>
+      </BrowserRouter>
     )
   }
 
