@@ -6,6 +6,7 @@ import Categories from "./Category/categories"
 import Store from "./Store/store"
 import Hero from "./Hero/hero"
 import Cart from "./Cart/cart"
+import Filter from "./Product/filterList"
 
 class App extends React.Component {
 
@@ -84,8 +85,8 @@ class App extends React.Component {
                 <Hero hero={this.state.store.wallpapers.iphone.url} />
               </div>
 
-              <Products updateProducts={this.updateCart.bind(this)} />
-              <Route path="/:cate" component={Products} updateProducts={this.updateCart.bind(this)} />
+              <Route exact path="/" component={Products} updateProducts={this.updateCart.bind(this)} />
+              <Route path="/:cate" component={Filter} updateProducts={this.updateCart.bind(this)} />
             </div>
           </div>
         </div>
