@@ -69,7 +69,10 @@ h1, .deliveryTime, .priceHolder {
 
 .navigation {
   width: 20%;
-  /*background-color: lightgreen;*/
+}
+
+.storeName {
+  height: 300px;
 }
 
 .productPage {
