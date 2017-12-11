@@ -88,6 +88,8 @@ h1, .deliveryTime, .priceHolder {
   margin-bottom: 5px;
 }
 
+/*@media (max-width: 600px)*/
+
 .productList {
   width: 100%;
   display: flex;
