@@ -88,6 +88,8 @@ h1, .deliveryTime, .priceHolder {
   margin-bottom: 5px;
 }
 
+/*@media (max-width: 600px)*/
+
 .productList {
   width: 100%;
   display: flex;
@@ -141,7 +143,7 @@ h1, .deliveryTime, .priceHolder {
   background-color: white;
 }
 
-.oneProduct:hover .description {
+/*.oneProduct:hover .description {
   display: block;
   z-index: 3;
 }
@@ -156,7 +158,7 @@ h1, .deliveryTime, .priceHolder {
 
 .oneProduct:hover .imageHolder {
 display: none;
-}
+}*/
 
 .list{
   margin: 5px;
