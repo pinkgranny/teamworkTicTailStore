@@ -12,8 +12,16 @@ export default class ProductPage extends React.Component {
   }
 
   componentDidMount() {
-    const productInfo = products.find(p => (p.prodId === this.props.match.params.id))
-    this.setProduct(product)
+    fetch("https://api.tictail.com/v1.26/stores/5znv/products").then((response) => {
+      return response.json()
+      const foundProduct = this.state.products.find(p => (p.title === this.props.match.params.prodName))
+    // this.setProduct(product)
+    }).then((foundProduct) => {
+    // console.log(json)
+      this.setState({
+        products: foundProduct
+      })
+    })
   }
 
   setProduct = (product) => {
