@@ -44,7 +44,6 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  display: none;
   padding: 10px;
 }
 
