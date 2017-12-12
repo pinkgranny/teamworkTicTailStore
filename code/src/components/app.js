@@ -80,7 +80,8 @@ class App extends React.Component {
 
             <div className="productPage">
               <div className="hero">
-                <Hero hero={this.state.store.wallpapers.iphone.url} />
+                {/* <Hero className="ProductPage" hero={this.props.prodImage} /> */}
+                <Hero className="Home" hero={this.state.store.wallpapers.iphone.url} />
               </div>
 
               <Route exact path="/" component={Products} updateCart={this.updateCart.bind(this)} />
