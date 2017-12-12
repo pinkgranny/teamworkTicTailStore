@@ -30,12 +30,34 @@ export default class ProductPage extends React.Component {
     })
   }
 
+  formatPrice(price) {
+    return (price / 100).toFixed(2)
+  }
+
   render() {
     return (
       <div className="product-info">
-        Hello
-        {this.state.oneProduct.title}
+        {/* <div className="productHero" style={{ backgroundImage: `url(${this.state.oneProduct.images[0].url})` }} /> */}
+        <h1>{this.state.oneProduct.title}</h1>
+        <h2>Product description</h2>
+        <p> {this.state.oneProduct.description}</p>
 
+        <div className="productBottom">
+          <div className="priceHolder">
+            <div className="price">
+              {this.formatPrice(this.state.oneProduct.price)}
+            </div>
+
+            <button
+              onClick={() => {
+                this.props.updateProducts(this.props.prodId)
+              }
+              }
+              className="button">
+              Köp
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
