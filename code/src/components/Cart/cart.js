@@ -7,7 +7,7 @@ class Cart extends React.Component {
     return (
       <div className="productCart">
         <div className="cartInfo">
-          {this.props.prodName}
+          {this.props.productId}
         </div>
         {/* <div className="cartInfo">
           {this.props.title}
