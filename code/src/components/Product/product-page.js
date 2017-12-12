@@ -30,17 +30,21 @@ export default class ProductPage extends React.Component {
     })
   }
 
+  formatPrice(price) {
+    return (price / 100).toFixed(2)
+  }
+
   render() {
     return (
       <div className="product-info">
         <h1>{this.state.oneProduct.title}</h1>
         <h2>Product description</h2>
-        <p> {this.state.oneProduct.prodDescription}</p>
+        <p> {this.state.oneProduct.description}</p>
 
         <div className="productBottom">
           <div className="priceHolder">
             <div className="price">
-              {this.props.prodPrice}
+              {this.formatPrice(this.state.oneProduct.price)}
             </div>
 
             <button
