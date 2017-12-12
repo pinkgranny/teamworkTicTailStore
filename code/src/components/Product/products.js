@@ -36,7 +36,7 @@ class Products extends React.Component {
         <div className="productList">
           {this.state.products.map(item =>
             <Product
-              updateCart={this.props.updateCart}
+              updateProducts={this.props.updateProducts}
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}
