@@ -63,7 +63,7 @@ class App extends React.Component {
               {this.state.cart.map(item =>
                 <li>
                   <Cart
-                    prodName={item.id} />
+                    productId={item.id} />
                 </li>)}
             </div>
 
