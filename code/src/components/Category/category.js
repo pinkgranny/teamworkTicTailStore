@@ -13,7 +13,7 @@ class Category extends React.Component {
 
         <h1 className="name">
           {/* <a href="url"> {this.props.title}</a> */}
-          <Link to={`/${this.props.title}`}>{this.props.title}</Link>
+          <Link className="link" to={`/${this.props.title}`}>{this.props.title}</Link>
         </h1>
 
       </div>
