@@ -33,9 +33,26 @@ export default class ProductPage extends React.Component {
   render() {
     return (
       <div className="product-info">
-        Hello
-        {this.state.oneProduct.title}
+        <h1>{this.state.oneProduct.title}</h1>
+        <h2>Product description</h2>
+        <p> {this.state.oneProduct.prodDescription}</p>
 
+        <div className="productBottom">
+          <div className="priceHolder">
+            <div className="price">
+              {this.props.prodPrice}
+            </div>
+
+            <button
+              onClick={() => {
+                this.props.updateProducts(this.props.prodId)
+              }
+              }
+              className="button">
+              Köp
+            </button>
+          </div>
+        </div>
       </div>
     )
   }
