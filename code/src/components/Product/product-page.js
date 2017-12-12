@@ -11,10 +11,18 @@ export default class ProductPage extends React.Component {
     }
   }
 
-  componentDidMount() {
-    const id = this.props.match.url
-    console.log(id)
-    fetch(`https://api.tictail.com/v1.25/stores/5znv/products${id}`).then((response) => {
+ componentDidMount() {
+   this.setProductFromApi()
+ }
+
+ componentWillReceiveProps() {
+   this.setProductFromApi()
+ }
+
+  setProductFromApi = () => {
+    const id = this.props.match.params.productPage
+    // console.log(id)
+    fetch(`https://api.tictail.com/v1.25/stores/5znv/products/${id}`).then((response) => {
       return response.json()
     }).then((json) => {
       console.log(json)
