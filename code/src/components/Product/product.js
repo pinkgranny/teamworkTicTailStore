@@ -7,8 +7,9 @@ class Product extends React.Component {
   render() {
     return (
       <div className="oneProduct">
+
         <div className="productTop">
-          <Link to={`/${this.props.category}/${this.props.prodName}`}>
+          <Link to={`/${this.props.prodId}`}>
             <h1 className="name">
               {this.props.prodName}
             </h1>
