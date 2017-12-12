@@ -85,7 +85,7 @@ class App extends React.Component {
 
               <Route exact path="/" component={Products} updateCart={this.updateCart.bind(this)} />
               <Route exact path="/:cate" component={Filter} updateCart={this.updateCart.bind(this)} />
-              <Route path="/:productPage" component={ProductPage} />
+              <Route path="/products/:productPage" component={ProductPage} />
 
             </div>
           </div>
