@@ -8,7 +8,7 @@ class Product extends React.Component {
     console.log(this.props.updateCart)
     return (
       <div className="oneProduct">
-        <Link to={`/${this.props.category}/${this.props.prodName}`}>
+        <Link to={`/${this.props.prodId}`}>
 
           <div className="productTop">
             <h1 className="name">

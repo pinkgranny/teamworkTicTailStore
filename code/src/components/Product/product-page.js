@@ -12,7 +12,9 @@ export default class ProductPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://api.tictail.com/v1.25/stores/5znv/products/" + `${this.props.prodId}` ).then((response) => {
+    const id = this.props.match.url
+    console.log(id)
+    fetch(`https://api.tictail.com/v1.25/stores/5znv/products${id}`).then((response) => {
       return response.json()
     }).then((json) => {
       console.log(json)
