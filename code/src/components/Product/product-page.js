@@ -50,10 +50,8 @@ export default class ProductPage extends React.Component {
           <p> {this.state.oneProduct.description}</p>
 
           <div className="productBottom">
-            <div className="priceHolder">
-              {/* <div className="price">
-                {this.formatPrice(this.state.oneProduct.price)}
-              </div> */}
+            <div className="price">
+              {/* {this.formatPrice(this.state.oneProduct.price)} */}
               <h5 className="realPrice">
                 {this.state.oneProduct.variations[0].sale_active === false &&
                   `${this.formatPrice(this.state.oneProduct.price)} kr`
@@ -64,11 +62,11 @@ export default class ProductPage extends React.Component {
                   `${this.formatPrice(this.state.oneProduct.variations[0].sale_price)} kr`
                 }
               </h5>
-            </div>
-            <div className="originalPrice">
-              {this.state.oneProduct.variations[0].sale_active &&
-                `${this.formatPrice(this.state.oneProduct.original_price)} kr`
-              }
+              <div className="originalPrice">
+                {this.state.oneProduct.variations[0].sale_active &&
+                  `${this.formatPrice(this.state.oneProduct.original_price)} kr`
+                }
+              </div>
             </div>
 
             <button

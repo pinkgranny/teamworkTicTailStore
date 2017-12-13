@@ -103,6 +103,17 @@
   color: red
 }
 
+.oneProductPage .price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.oneProductPage .originalPrice {
+  margin-left: 15px;
+  font-size: 15px;
+}
+
 .button {
   font-family: 'Josefin Sans', sans-serif;
   background-color: black;
