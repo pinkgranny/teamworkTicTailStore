@@ -19,6 +19,7 @@ body {
 
 .cartList {
   display: none;
+  color: blue;
   position: absolute;
   top: 60px;
   right: 0px;
