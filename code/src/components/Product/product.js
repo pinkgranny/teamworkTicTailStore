@@ -28,7 +28,7 @@ class Product extends React.Component {
         <div className="productBottom">
           <div className="priceHolder">
             <div className="price">
-              {this.props.prodPrice}
+              {this.props.prodPrice} SEK
             </div>
 
             <button
@@ -42,7 +42,7 @@ class Product extends React.Component {
           </div>
 
           <div className="deliveryTime">
-            {this.props.prodOrgPrice}
+            {this.props.prodOrgPrice} SEK
           </div>
         </div>
 
