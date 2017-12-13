@@ -82,7 +82,7 @@ class App extends React.Component {
               <Hamburger />
             </div>
             <div className="logo">
-              Logo
+
             </div>
 
             <input id="cartBox_id" type="checkbox" className="cartBox" />
