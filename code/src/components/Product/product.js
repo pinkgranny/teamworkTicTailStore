@@ -33,7 +33,7 @@ class Product extends React.Component {
 
             <button
               onClick={() => {
-                this.props.updateProducts(this.props.prodId)
+                this.props.updateProducts(this.props.prodId, this.props.variationId)
               }
               }
               className="button">
