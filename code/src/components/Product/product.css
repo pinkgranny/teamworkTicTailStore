@@ -188,7 +188,6 @@ display: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    align-content: center;
     min-height: 100vh;
     margin: 6% auto;
   }
@@ -198,7 +197,7 @@ display: none;
     height: 63vw;
     background-size: contain;
     background-repeat: no-repeat;
-    text-align: center;
+    background-position: center;
   }
 
   .oneProductPage .productInfo {
