@@ -82,14 +82,19 @@ class App extends React.Component {
                 exact
                 path="/"
                 render={routeProps =>
-                  <Filter {...routeProps} store={this.state.store}
+                  <Filter
+                    {...routeProps}
+                    store={this.state.store}
                     updateCart={this.updateCart.bind(this)} />
                 } />
               <Route
                 exact
                 path="/:cate"
                 render={routeProps =>
-                  <Filter {...routeProps} store={this.state.store} updateCart={this.updateCart.bind(this)} />
+                  <Filter
+                    {...routeProps}
+                    store={this.state.store}
+                    updateCart={this.updateCart.bind(this)} />
                 } />
               <Route
                 path="/products/:productPage"
