@@ -1,5 +1,6 @@
 import React from "react"
 import Product from "./product"
+import Hero from "../Hero/hero"
 
 class Filter extends React.Component {
   constructor(props) {
@@ -28,14 +29,21 @@ class Filter extends React.Component {
   }
 
   render() {
-    console.log(this)
+    console.log("Store", this)
     const kategori = this.props.match.params.cate
-    const products = this.state.products.filter(product => {
-      const categories = product.categories.map(category => category.title)
-      return categories.includes(kategori)
-    })
+    let { products } = this.state
+    if (kategori) {
+      products = products.filter((product) => {
+        const categories = product.categories.map(category => category.title)
+        return categories.includes(kategori)
+      })
+    }
     return (
       <div className="productWrap">
+        <div className="hero">
+          {/* <Hero className="ProductPage" hero={this.props.prodImage} /> */}
+          <Hero className="Home" hero={this.props.store.wallpapers.iphone.url} />
+        </div>
         <div className="productHeader">
           Visar {products.length} produkter
         </div>

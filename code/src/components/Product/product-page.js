@@ -7,7 +7,11 @@ export default class ProductPage extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      oneProduct: {}
+      oneProduct: {
+        images: [
+          {url: null}
+        ]
+      }
     }
   }
 
@@ -37,7 +41,7 @@ export default class ProductPage extends React.Component {
   render() {
     return (
       <div className="product-info">
-        {/* <div className="productHero" style={{ backgroundImage: `url(${this.state.oneProduct.images[0].url})` }} /> */}
+        <div className="productHero" style={{ backgroundImage: `url(${this.state.oneProduct.images[0].url})` }} />
         <h1>{this.state.oneProduct.title}</h1>
         <h2>Product description</h2>
         <p> {this.state.oneProduct.description}</p>
