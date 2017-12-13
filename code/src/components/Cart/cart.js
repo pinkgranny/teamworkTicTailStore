@@ -1,11 +1,14 @@
 import React from "react"
+import "./cart.css"
 
 class Cart extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      oneProduct: {}
+      oneProduct: {
+        images: [{}]
+      }
     }
   }
 
@@ -33,11 +36,10 @@ class Cart extends React.Component {
   }
 
   render() {
-    console.log(this.state.oneProduct)
     return (
       <div className="productCart">
         <div className="cartInfo">
-          {/* <img className="miniImage" src={this.state.oneProduct.images[0].url} /> */}
+          <img className="miniImage" src={this.state.oneProduct.images[0].url} />
           <h1>{this.state.oneProduct.title}</h1>
           {this.formatPrice(this.state.oneProduct.price)}
         </div>
