@@ -114,7 +114,6 @@ class App extends React.Component {
 
             <div className="navigation">
               <div className="storeName">
-                <Store name={this.state.store.name} />
                 <Store logo={this.state.store.logotype[0].url} />
               </div>
               <Categories />
