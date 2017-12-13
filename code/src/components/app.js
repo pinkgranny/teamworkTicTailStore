@@ -18,7 +18,8 @@ class App extends React.Component {
       store: {
         wallpapers: {
           iphone: {}
-        }
+        },
+        logotype: [0]
       }
     }
   }
@@ -83,7 +84,7 @@ class App extends React.Component {
               <Hamburger />
             </div>
             <div className="logo">
-
+              <img src="https://fontmeme.com/permalink/171213/4750a0456f68f7abc84237091a46ee42.png" alt="Store logotype" />
             </div>
 
             <input id="cartBox_id" type="checkbox" className="cartBox" />
@@ -114,6 +115,7 @@ class App extends React.Component {
             <div className="navigation">
               <div className="storeName">
                 <Store name={this.state.store.name} />
+                <Store logo={this.state.store.logotype[0].url} />
               </div>
               <Categories />
             </div>
