@@ -1,5 +1,7 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import Category from "./category"
+import "./category.css"
 
 class Categories extends React.Component {
   constructor(props) {
@@ -22,10 +24,13 @@ class Categories extends React.Component {
     return (
       <div className="categories">
         <h1>Categories</h1>
+        <h2 className="category-navigation">
+          <Link className="link" to="./">All products</Link>
+        </h2>
         {this.state.categories.map((item) => {
-        return <Category
-          title={item.title}
-          count={item.product_count} />
+          return <Category
+            title={item.title}
+            count={item.product_count} />
         })}
       </div>
     )

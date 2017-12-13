@@ -18,7 +18,7 @@ class Filter extends React.Component {
   componentDidMount() {
     console.log("the next row is the category")
     // console.log(this.props.match.params.cate)
-    fetch("https://api.tictail.com/v1.26/stores/5znv/products").then((response) => {
+    fetch("https://api.tictail.com/v1.26/stores/5znv/products?order_by=position").then((response) => {
       return response.json()
     }).then((json) => {
       // console.log(json)

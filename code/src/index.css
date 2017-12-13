@@ -144,7 +144,8 @@ a:hover {
   justify-content: space-between;
 }
 
-.name, .name2 {
+.category-navigation, .product-name, .name2 {
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 20px;
   margin: 10px;
   margin-left: 0;
@@ -202,8 +203,9 @@ display: none;
   align-items: center;
 }
 
-.price {
-  font-size: 20px;
+.price h5 {
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .button {
@@ -228,7 +230,7 @@ display: none;
 }
 
 @media (min-width: 600px) and (max-width: 1024px)  {
-  
+
   .hamburger {
     visibility: visible;
   }

@@ -10,9 +10,9 @@ class Product extends React.Component {
 
         <div className="productTop">
           <Link className="link" to={`/products/${this.props.prodId}`}>
-            <h1 className="name">
+            <h2 className="product-name">
               {this.props.prodName}
-            </h1>
+            </h2>
           </Link>
           <div className="description">
             <h2> Product details</h2>
@@ -28,7 +28,7 @@ class Product extends React.Component {
         <div className="productBottom">
           <div className="priceHolder">
             <div className="price">
-              {this.props.prodPrice} SEK
+              <h5>{this.props.prodPrice} SEK</h5>
             </div>
 
             <button

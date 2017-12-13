@@ -11,10 +11,10 @@ class Category extends React.Component {
     return (
       <div className="oneCategory">
 
-        <h1 className="name">
+        <h2 className="category-navigation">
           {/* <a href="url"> {this.props.title}</a> */}
           <Link className="link" to={`/${this.props.title}`}>{this.props.title}</Link>
-        </h1>
+        </h2>
 
       </div>
     )
