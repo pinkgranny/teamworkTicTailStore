@@ -98,9 +98,10 @@ class App extends React.Component {
               {this.state.cart.map(item =>
                 <Cart
                   productId={item.productId} />)}
+              {this.state.cart.length > 0 &&
                 <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
                   Betala
-                </div>
+                </div>}
             </div>
 
           </div>
