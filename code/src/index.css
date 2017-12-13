@@ -24,12 +24,9 @@ body {
 }
 
 .logo {
+  font-size: 30px;
   font-weight: bold;
   color: black;
-}
-
-.logo img {
-  height: 50px;
 }
 
 h1 {
@@ -42,9 +39,6 @@ h1 {
   margin-top: 15px;
 }
 
-a {
-  text-decoration: none;
-}
 a:link {
   text-decoration: none;
   color: black;
