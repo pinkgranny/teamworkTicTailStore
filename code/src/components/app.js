@@ -88,7 +88,7 @@ class App extends React.Component {
 
             <input id="cartBox_id" type="checkbox" className="cartBox" />
 
-            <label className="cartButton" htmlFor="cartBox_id">
+            <label className="cartButton1" htmlFor="cartBox_id">
               <div className="cartButton" id="cartButtonId">
                 <i className="fa fa-shopping-cart" />
                 {this.state.cart.length} products
