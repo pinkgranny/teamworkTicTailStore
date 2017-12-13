@@ -13,7 +13,7 @@ class Category extends React.Component {
 
         <h2 className="category-navigation">
           {/* <a href="url"> {this.props.title}</a> */}
-          <Link className="link" to={`/${this.props.title}`}>{this.props.title}</Link>
+          <Link onClick={this.props.onClick} className="link" to={`/${this.props.title}`}>{this.props.title}</Link>
         </h2>
 
       </div>
