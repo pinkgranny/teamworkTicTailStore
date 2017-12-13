@@ -43,7 +43,7 @@ class Filter extends React.Component {
         <div className="productList">
           {products.map(item =>
             <Product
-              updateProducts={this.props.updateProducts}
+              updateProducts={this.props.updateCart}
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}

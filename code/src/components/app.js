@@ -84,9 +84,23 @@ class App extends React.Component {
                 <Hero className="Home" hero={this.state.store.wallpapers.iphone.url} />
               </div>
 
-              <Route exact path="/" component={Products} updateCart={this.updateCart.bind(this)} />
-              <Route exact path="/:cate" component={Filter} updateCart={this.updateCart.bind(this)} />
-              <Route path="/products/:productPage" component={ProductPage} />
+              <Route
+                exact
+                path="/"
+                render={routeProps =>
+                  <Products {...routeProps} updateCart={this.updateCart.bind(this)} />
+                } />
+              <Route
+                exact
+                path="/:cate"
+                render={routeProps =>
+                  <Filter {...routeProps} updateCart={this.updateCart.bind(this)} />
+                } />
+              <Route
+                path="/products/:productPage"
+                render={routeProps =>
+                  <ProductPage {...routeProps} updateCart={this.updateCart.bind(this)} />
+                } />
 
             </div>
           </div>
