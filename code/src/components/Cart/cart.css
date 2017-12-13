@@ -47,7 +47,7 @@ margin-right: 5vw;
 }
 
 .cartButton:hover {
-  background-color: white;
+  background-color: gray;
 }
 
 .checkOutButtonContainer {
