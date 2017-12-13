@@ -9,19 +9,19 @@ export default class ProductPage extends React.Component {
     this.state = {
       oneProduct: {
         images: [
-          {url: null}
+          { url: null }
         ]
       }
     }
   }
 
- componentDidMount() {
-   this.setProductFromApi()
- }
+  componentDidMount() {
+    this.setProductFromApi()
+  }
 
- componentWillReceiveProps() {
-   this.setProductFromApi()
- }
+  componentWillReceiveProps() {
+    this.setProductFromApi()
+  }
 
   setProductFromApi = () => {
     const id = this.props.match.params.productPage
@@ -101,7 +101,8 @@ export default class ProductPage extends React.Component {
 //   return (
 //     <div className="ProductPage">
 //       <p>Breadcrumb path placeholder</p>
-//       {<div className="imageHolder" style={{backgroundImage:`url(${this.state.product.images[0].url})` }}>
+//       {<div className="imageHolder"
+//          style={{backgroundImage:`url(${this.state.product.images[0].url})` }}>
 //       </div>}
 //
 //       <div className="product-info">

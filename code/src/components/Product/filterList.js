@@ -6,7 +6,12 @@ class Filter extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: []
+      products: [
+        {
+          images: [{ url: null }],
+          categories: [{ title: null }]
+        }
+      ]
     }
   }
 
@@ -32,17 +37,21 @@ class Filter extends React.Component {
     console.log("Store", this)
     const kategori = this.props.match.params.cate
     let { products } = this.state
+    let heroImage = this.props.store.wallpapers.iphone.url
     if (kategori) {
       products = products.filter((product) => {
         const categories = product.categories.map(category => category.title)
         return categories.includes(kategori)
       })
+      if (products.length > 0) {
+        heroImage = products[products.length - 1].images[0].url
+      }
     }
     return (
       <div className="productWrap">
         <div className="hero">
           {/* <Hero className="ProductPage" hero={this.props.prodImage} /> */}
-          <Hero className="Home" hero={this.props.store.wallpapers.iphone.url} />
+          <Hero className="Home" hero={heroImage} />
         </div>
         <div className="productHeader">
           Visar {products.length} produkter
