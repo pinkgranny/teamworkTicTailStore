@@ -23,7 +23,6 @@ class Categories extends React.Component {
   render() {
     return (
       <div className="categories">
-        <h1>Categories</h1>
         <h2 className="category-navigation">
           <Link className="link" to="/">All products</Link>
         </h2>

@@ -25,6 +25,7 @@ body {
 
 .logo img {
   height: 50px;
+  display: none;
 }
 
 h1 {
@@ -89,6 +90,9 @@ a:hover {
   .navigation {
     display: none;
   }
+  .logo img {
+    display: inline;
+  }
 }
 
 @media (max-width: 600px)  {
@@ -109,5 +113,8 @@ a:hover {
 
   .navigation {
     display: none;
+  }
+  .logo img {
+    display: inline;
   }
 }
