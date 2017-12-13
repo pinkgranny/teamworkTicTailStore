@@ -43,7 +43,7 @@ export default class ProductPage extends React.Component {
       <div className="oneProductPage">
         <div className="productInfo">
           <h1>{this.state.oneProduct.title}</h1>
-          <h2>Product description</h2>
+          <h3>Product description</h3>
           <p> {this.state.oneProduct.description}</p>
 
           <div className="productBottom">
