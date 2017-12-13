@@ -142,9 +142,10 @@ class App extends React.Component {
               <Route
                 path="/products/:productPage"
                 render={routeProps =>
-                  <ProductPage {...routeProps} updateCart={this.updateCart.bind(this)} />
+                  <ProductPage
+                    {...routeProps}
+                    updateCart={this.updateCart.bind(this)} />
                 } />
-
             </div>
           </div>
         </div>

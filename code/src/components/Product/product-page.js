@@ -54,7 +54,7 @@ export default class ProductPage extends React.Component {
 
               <button
                 onClick={() => {
-                  this.props.updateCart(this.state.oneProduct.id)
+                  this.props.updateCart(this.state.oneProduct.id, this.state.oneProduct.variations[0].id)
                 }
                 }
                 className="button">
