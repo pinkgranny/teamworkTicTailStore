@@ -9,13 +9,13 @@ class Cart extends React.Component {
     }
   }
 
- componentDidMount() {
-   this.setProductFromApi()
- }
+  componentDidMount() {
+    this.setProductFromApi()
+  }
 
- componentWillReceiveProps() {
-   this.setProductFromApi()
- }
+  componentWillReceiveProps() {
+    this.setProductFromApi()
+  }
 
   setProductFromApi = () => {
     const id = this.props.productId

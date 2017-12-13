@@ -1,13 +1,12 @@
 import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
-import Products from "./Product/products"
 import "./../index.css"
 import Categories from "./Category/categories"
 import Store from "./Store/store"
-import Hero from "./Hero/hero"
 import Cart from "./Cart/cart"
 import Filter from "./Product/filterList"
 import ProductPage from "./Product/product-page"
+import Hamburger from "./Hamburger/hamburger"
 
 class App extends React.Component {
 
@@ -44,7 +43,7 @@ class App extends React.Component {
         <div className="App">
           <div className="header">
             <div className="hamburger">
-              Hamburger
+              <Hamburger />
             </div>
             <div className="logo">
               Logo
@@ -79,22 +78,19 @@ class App extends React.Component {
             </div>
 
             <div className="productPage">
-              <div className="hero">
-                {/* <Hero className="ProductPage" hero={this.props.prodImage} /> */}
-                <Hero className="Home" hero={this.state.store.wallpapers.iphone.url} />
-              </div>
 
               <Route
                 exact
                 path="/"
                 render={routeProps =>
-                  <Products {...routeProps} updateCart={this.updateCart.bind(this)} />
+                  <Filter {...routeProps} store={this.state.store}
+                    updateCart={this.updateCart.bind(this)} />
                 } />
               <Route
                 exact
                 path="/:cate"
                 render={routeProps =>
-                  <Filter {...routeProps} updateCart={this.updateCart.bind(this)} />
+                  <Filter {...routeProps} store={this.state.store} updateCart={this.updateCart.bind(this)} />
                 } />
               <Route
                 path="/products/:productPage"
