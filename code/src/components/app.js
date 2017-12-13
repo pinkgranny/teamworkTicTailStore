@@ -8,6 +8,7 @@ import Hero from "./Hero/hero"
 import Cart from "./Cart/cart"
 import Filter from "./Product/filterList"
 import ProductPage from "./Product/product-page"
+import Hamburger from "./Hamburger/hamburger"
 
 class App extends React.Component {
 
@@ -44,7 +45,7 @@ class App extends React.Component {
         <div className="App">
           <div className="header">
             <div className="hamburger">
-              Hamburger
+              <Hamburger />
             </div>
             <div className="logo">
               Logo
