@@ -27,8 +27,24 @@ class Product extends React.Component {
 
         <div className="productBottom">
           <div className="priceHolder">
-            <div className="price">
-              <h5>{this.props.prodPrice} kr</h5>
+            <div className="prices">
+              <div className="price">
+                <h5 className="realPrice">
+                  {this.props.prodSale === false &&
+                    `${this.props.prodPrice} kr`
+                  }
+                </h5>
+                <h5 className="salePrice">
+                  {this.props.prodSale &&
+                    `${this.props.prodSalePrice} kr`
+                  }
+                </h5>
+              </div>
+              <div className="originalPrice">
+                {this.props.prodSale &&
+                  `${this.props.prodOrgPrice} kr`
+                }
+              </div>
             </div>
 
             <button
@@ -41,9 +57,11 @@ class Product extends React.Component {
             </button>
           </div>
 
-          <div className="deliveryTime">
-            {this.props.prodOrgPrice} kr
-          </div>
+          {/* <div className="originalPrice">
+            {this.props.prodSale &&
+              `${this.props.prodOrgPrice} kr`
+            }
+          </div> */}
         </div>
 
       </div>
