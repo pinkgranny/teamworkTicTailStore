@@ -1,6 +1,79 @@
-.Hamburger div {
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 6px 0;
+#hamburger-toggle {
+  display: none;
+}
+
+ .hamburger {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.hamburger .bar {
+  width: 30px;
+  background: black;
+  height: 3px;
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  transition: all 0.15s ease-in-out;
+  opacity: 1;
+}
+
+#hamburger-toggle:checked ~ .hamburger .bar {
+   width: 25px;
+   background: white;
+}
+
+.hamburger .bar:nth-child(1) {
+  top: 12px;
+}
+
+#hamburger-toggle:checked ~ .hamburger .bar:nth-child(1) {
+  transform: rotate(135deg) translateY(-4px) translateX(4px);
+}
+
+.hamburger .bar:nth-child(2) {
+  top: 20px;
+}
+
+#hamburger-toggle:checked ~ .hamburger .bar:nth-child(2) {
+  left: -5px;
+  opacity: 0;
+}
+.hamburger .bar:nth-child(3) {
+  top: 28px;
+}
+
+#hamburger-toggle:checked ~ .hamburger .bar:nth-child(3) {
+  transform: rotate(-135deg) translateY(7px) translateX(7px);
+}
+
+.hamburger .menu {
+  position: absolute;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #e5d2c4;
+  width: 300px;
+  height: 400px;
+  top: 50px;
+  left: -350px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: left 0.2s ease-in;
+  border-bottom-right-radius: 50px;
+}
+
+.hamburger .menu h2 {
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+#hamburger-toggle:checked ~ .menu {
+  left: -40px;
 }
