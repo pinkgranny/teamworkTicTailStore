@@ -13,49 +13,6 @@ body {
   visibility: hidden;
 }
 
-.cartButton {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  background-color: black;
-  color: #e5d2c4;
-  font-size: 18px;
-  height: 40px;
-  width: 150px;
-  border: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.cartButton i {
-  font-size: 24px;
-}
-
-.cartList {
-  display: none;
-  color: blue;
-  position: absolute;
-  top: 60px;
-  right: 0px;
-  margin-left: 0;
-  padding: 0;
-  width: 500px;
-}
-
-.cartBox {
-  display: none;
-}
-
-.cartBox:checked ~ .cartList {
-  display: block;
-  color: black;
-  background-color: white;
-}
-
-.checkOutButton {
-  background: pink;
-  height: 50px;
-}
-
 .header {
   background-color: #e5d2c4;
   height: 40px;

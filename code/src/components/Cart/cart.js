@@ -32,7 +32,7 @@ class Cart extends React.Component {
   }
 
   formatPrice(price) {
-    return (price / 100).toFixed(2)
+    return (price / 100).toFixed()
   }
 
   render() {
@@ -41,7 +41,7 @@ class Cart extends React.Component {
         <div className="cartInfo">
           <img className="miniImage" src={this.state.oneProduct.images[0].url} />
           <h1>{this.state.oneProduct.title}</h1>
-          {this.formatPrice(this.state.oneProduct.price)} SEK
+          {this.formatPrice(this.state.oneProduct.price)} kr
         </div>
       </div>
     )
