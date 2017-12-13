@@ -6,12 +6,7 @@ class Filter extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      products: [
-        {
-          images: [{ url: null }],
-          categories: [{ title: null }]
-        }
-      ]
+      products: []
     }
   }
 
@@ -47,6 +42,7 @@ class Filter extends React.Component {
         heroImage = products[products.length - 1].images[0].url
       }
     }
+    console.log(this.state.products)
     return (
       <div className="productWrap">
         <div className="hero">
@@ -61,6 +57,7 @@ class Filter extends React.Component {
           {products.map(item =>
             <Product
               updateProducts={this.props.updateCart}
+              variationId={item.variations[0].id}
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}

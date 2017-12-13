@@ -31,9 +31,51 @@ class App extends React.Component {
     })
   }
 
-  updateCart(productId) {
+  updateCart(productId, variationId) {
+    console.log(productId, variationId)
     this.setState({
-      cart: [...this.state.cart, productId]
+      cart: [...this.state.cart, {
+        productId,
+        variationId
+      }]
+    })
+  }
+
+  /*
+    store_id,
+    attribution: 'marketplace',
+    user_id: null,
+    items: [{
+      product_id,
+      variation_id,
+      quantity,
+  }]
+  */
+
+  goToCart() {
+    fetch("https://api.tictail.com/v1.26/carts", {
+      method: "POST",
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        store_id: this.state.store.id,
+        attribution: "marketplace",
+        user_id: null,
+        items: this.state.cart.map((item) => {
+          return {
+            product_id: item.productId,
+            variation_id: item.variationId,
+            quantity: 1
+          }
+        })
+      })
+    }).then((response) => {
+      return response.json()
+    }).then((json) => {
+      console.log(json)
+      window.location.href = `https://www.tictail.com/checkout?cart_token=${json.token}`
     })
   }
 
@@ -60,10 +102,11 @@ class App extends React.Component {
 
             <div className="cartList">
               {this.state.cart.map(item =>
-                <li>
-                  <Cart
-                    productId={item} />
-                </li>)}
+                <Cart
+                  productId={item.productId} />)}
+              <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
+                Betala
+              </div>
             </div>
 
           </div>

@@ -41,15 +41,8 @@ class Cart extends React.Component {
         <div className="cartInfo">
           <img className="miniImage" src={this.state.oneProduct.images[0].url} />
           <h1>{this.state.oneProduct.title}</h1>
-          {this.formatPrice(this.state.oneProduct.price)}
+          {this.formatPrice(this.state.oneProduct.price)} SEK
         </div>
-        {/* <div className="cartInfo">
-          {this.props.title}
-        </div>
-
-        <div className="cartPrice">
-          {this.props.price}
-        </div> */}
       </div>
     )
   }

@@ -1,4 +1,17 @@
 .miniImage {
   height: 100px;
   width: 100px;
+  display: inline;
+}
+
+.cartInfo {
+  display: inline;
+}
+
+.cartInfo h1 {
+  display: inline;
+}
+
+.productCart{
+  border: 1px solid black;
 }
