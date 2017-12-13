@@ -170,6 +170,9 @@ display: none;
     text-align: center;
     font-size: 24px;
   }
+  .oneProduct:last-child {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 425px) and (max-width: 600px)  {
@@ -194,5 +197,8 @@ display: none;
   .product-name {
     text-align: center;
     font-size: 30px;
+  }
+  .oneProduct:last-child {
+    margin-right: 0;
   }
 }
