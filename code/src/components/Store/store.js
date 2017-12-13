@@ -14,6 +14,7 @@ class Store extends React.Component {
     return (
       <div className="store">
         <h1>{this.props.name}</h1>
+        <div className="image-logo" style={{ backgroundImage: `url(${this.props.logo})` }} />
       </div>
     )
   }
