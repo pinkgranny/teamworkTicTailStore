@@ -41,23 +41,12 @@ class App extends React.Component {
     })
   }
 
-  /*
-    store_id,
-    attribution: 'marketplace',
-    user_id: null,
-    items: [{
-      product_id,
-      variation_id,
-      quantity,
-  }]
-  */
-
   goToCart() {
     fetch("https://api.tictail.com/v1.26/carts", {
       method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
       },
       body: JSON.stringify({
         store_id: this.state.store.id,
@@ -80,6 +69,11 @@ class App extends React.Component {
   }
 
   render() {
+    //  if ({this.state.cart.length} > 0) {
+    //   <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
+    //     Betala
+    //   </div>
+    // }
     return (
       <BrowserRouter>
         <div className="App">
@@ -104,9 +98,9 @@ class App extends React.Component {
               {this.state.cart.map(item =>
                 <Cart
                   productId={item.productId} />)}
-              <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
-                Betala
-              </div>
+                <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
+                  Betala
+                </div>
             </div>
 
           </div>
