@@ -23,10 +23,8 @@ body {
   padding: 10px 0 10px 10px;;
 }
 
-.logo {
-  font-size: 30px;
-  font-weight: bold;
-  color: black;
+.logo img {
+  height: 50px;
 }
 
 h1 {
