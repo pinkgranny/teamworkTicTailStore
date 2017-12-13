@@ -9,8 +9,8 @@
   width: 150px;
   border: 0;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
 }
 
 .cartButton i {
@@ -18,35 +18,54 @@
 }
 
 .cartList {
-  display: none;
   background-color: #e5d2c4;
   position: absolute;
   top: 60px;
   right: 0px;
   margin-left: 0;
   padding: 0;
-  width: 500px;
+  right: -300px;
+  width: 300px;
   border-bottom-left-radius: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: right 0.2s ease-in;
 }
 
-.checkOutButton {
-  border-bottom-left-radius: 50px;
-}
 .cartBox {
   display: none;
 }
 
 .cartBox:checked ~ .cartList {
-  display: block;
+  display: flex;
   color: black;
+  right: 0;
 }
 
-.checkOutButton {
+.cartButton:hover {
+  background-color: white;
+}
+
+.checkOutButtonContainer {
+  text-align: center;
   background-color: #e5d2c4;
-  height: 50px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+}
+.checkOutButton {
+  margin-right: 10px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: black;
+  color: #e5d2c4;
+  padding-top: 6px;
+  font-size: 18px;
+  height: 30px;
+  width: 150px;
 }
 
 .miniImage {
@@ -56,9 +75,13 @@
 }
 
 .cartInfo {
-  display: inline;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   font-size: 14px;
   font-family: 'Raleway', sans-serif;
+  margin: 10px;
 }
 
 .cartInfo h1 {

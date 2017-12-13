@@ -1,6 +1,7 @@
 import React from "react"
 import { BrowserRouter, Route } from "react-router-dom"
 import "./../index.css"
+import "./Cart/cart.css"
 import Categories from "./Category/categories"
 import Store from "./Store/store"
 import Cart from "./Cart/cart"
@@ -88,7 +89,7 @@ class App extends React.Component {
             <input id="cartBox_id" type="checkbox" className="cartBox" />
 
             <label className="cartButton" htmlFor="cartBox_id">
-              <div className="cartButton">
+              <div className="cartButton" id="cartButtonId">
                 <i className="fa fa-shopping-cart" />
                 {this.state.cart.length} products
               </div>
@@ -99,8 +100,10 @@ class App extends React.Component {
                 <Cart
                   productId={item.productId} />)}
               {this.state.cart.length > 0 &&
-                <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
-                  Betala
+                <div className="checkOutButtonContainer">
+                  <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
+                    Betala
+                  </div>
                 </div>}
             </div>
 
