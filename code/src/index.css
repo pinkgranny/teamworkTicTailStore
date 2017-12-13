@@ -33,7 +33,11 @@ h1 {
   margin-top: 15px;
 }
 
-.deliveryTime, .priceHolder {
+h2 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.originalPrice, .priceHolder {
   font-family: 'Raleway', sans-serif;
   margin-top: 15px;
 }

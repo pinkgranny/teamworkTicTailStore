@@ -54,6 +54,8 @@ class Filter extends React.Component {
             <Product
               updateProducts={this.props.updateCart}
               variationId={item.variations[0].id}
+              prodSale={item.variations[0].sale_active}
+              prodSalePrice={this.formatPrice(item.variations[0].sale_price)}
               prodName={item.title}
               prodImage={item.images[0].url}
               prodDescription={item.description}

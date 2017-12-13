@@ -35,7 +35,7 @@ export default class ProductPage extends React.Component {
   }
 
   formatPrice(price) {
-    return (price / 100).toFixed(2)
+    return (price / 100).toFixed()
   }
 
   render() {

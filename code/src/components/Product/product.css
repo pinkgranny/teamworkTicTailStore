@@ -97,6 +97,10 @@
 .price h5 {
   font-size: 15px;
   font-family: 'Raleway', sans-serif;
+  display: inline;
+}
+.salePrice {
+  color: red
 }
 
 .button {
@@ -114,11 +118,12 @@
   background-color: gray;
 }
 
-.deliveryTime {
+.originalPrice {
   text-align: center;
   color: gray;
   font-size: 14px;
   margin: 0;
+  text-decoration: line-through;
 }
 
 .productList {
