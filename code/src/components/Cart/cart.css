@@ -1,3 +1,6 @@
+.cartButton1 {
+margin-right: 5vw;
+}
 
 .cartButton {
   font-family: 'Raleway', sans-serif;
@@ -57,7 +60,7 @@
   border-bottom-left-radius: 50px;
 }
 .checkOutButton {
-  margin-right: 10px;
+  margin-right: 5vw;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   background-color: black;
