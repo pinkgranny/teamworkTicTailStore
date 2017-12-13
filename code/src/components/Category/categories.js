@@ -25,7 +25,7 @@ class Categories extends React.Component {
       <div className="categories">
         <h1>Categories</h1>
         <h2 className="category-navigation">
-          <Link className="link" to="./">All products</Link>
+          <Link className="link" to="/">All products</Link>
         </h2>
         {this.state.categories.map((item) => {
           return <Category
