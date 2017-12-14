@@ -13,7 +13,7 @@ class Product extends React.Component {
             <h2 className="product-name">
               {this.props.prodName}
             </h2>
-          </Link>
+
           <div className="description">
             <h2> Product details</h2>
             {/* <h1 className="name2">
@@ -23,6 +23,7 @@ class Product extends React.Component {
           </div>
 
           <div className="imageHolder" style={{ backgroundImage: `url(${this.props.prodImage})` }} />
+          </Link>
         </div>
 
         <div className="productBottom">
