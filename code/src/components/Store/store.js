@@ -1,20 +1,20 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./store.css"
 
 class Store extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      // name: null,
-      // description: null,
     }
   }
 
   render() {
     return (
       <div className="store">
-        <h1>{this.props.name}</h1>
-        <div className="image-logo" style={{ backgroundImage: `url(${this.props.logo})` }} />
+        <Link className="link" to="/">
+          <div className="image-logo" style={{ backgroundImage: `url(${this.props.logo})` }} />
+        </Link>
       </div>
     )
   }
