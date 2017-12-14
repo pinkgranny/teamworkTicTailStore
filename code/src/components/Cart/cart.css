@@ -1,5 +1,5 @@
 .cartButton1 {
-margin-right: 5vw;
+margin-right: ;
 }
 
 .cartButton {
@@ -9,6 +9,7 @@ margin-right: 5vw;
   color: #e5d2c4;
   font-size: 18px;
   height: 40px;
+  margin-right: 5.65vw;
   width: 150px;
   border: 0;
   display: flex;
@@ -28,7 +29,7 @@ margin-right: 5vw;
   right: 0px;
   margin-left: 0;
   padding: 0;
-  padding-right: 20px;
+  padding-right: 2vw;
   right: -100%;
   width: 300px;
   border-bottom-left-radius: 50px;
@@ -63,7 +64,7 @@ margin-right: 5vw;
 }
 
 .checkOutButton {
-  margin-right: 5vw;
+  margin-right: 3.65vw;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   background-color: black;
