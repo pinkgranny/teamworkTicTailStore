@@ -16,11 +16,13 @@ body {
 .header {
   background-color: #e5d2c4;
   height: 40px;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 10px 10px;;
+  padding: 10px 0 10px 10px;
+  position: fixed;
 }
 
 .logo img {
