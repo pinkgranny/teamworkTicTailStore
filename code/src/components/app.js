@@ -72,11 +72,6 @@ class App extends React.Component {
   }
 
   render() {
-    //  if ({this.state.cart.length} > 0) {
-    //   <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
-    //     Betala
-    //   </div>
-    // }
     return (
       <BrowserRouter>
         <ScrollToTop>

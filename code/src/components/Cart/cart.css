@@ -28,7 +28,8 @@ margin-right: 5vw;
   right: 0px;
   margin-left: 0;
   padding: 0;
-  right: -300px;
+  padding-right: 20px;
+  right: -100%;
   width: 300px;
   border-bottom-left-radius: 50px;
   display: flex;
@@ -60,16 +61,21 @@ margin-right: 5vw;
   align-items: center;
   border-bottom-left-radius: 50px;
 }
+
 .checkOutButton {
   margin-right: 5vw;
   font-family: 'Raleway', sans-serif;
   text-align: center;
   background-color: black;
   color: #e5d2c4;
-  padding-top: 6px;
+  padding: 6px 0 6px 0;
   font-size: 18px;
-  height: 30px;
   width: 150px;
+  border-radius: 3px;
+}
+
+.checkOutButton:hover {
+  background-color: gray;
 }
 
 .miniImage {
@@ -92,8 +98,4 @@ margin-right: 5vw;
   display: inline;
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-}
-
-.productCart {
-  /*border-bottom: 1px solid black;*/
 }
