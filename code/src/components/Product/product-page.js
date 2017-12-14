@@ -1,5 +1,4 @@
 import React from "react"
-import "./products.js"
 import "./product.css"
 
 export default class ProductPage extends React.Component {
