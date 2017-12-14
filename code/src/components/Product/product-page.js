@@ -77,7 +77,7 @@ export default class ProductPage extends React.Component {
               }
               }
               className="button">
-              Köp
+              Buy
             </button>
           </div>
         </div>

@@ -46,7 +46,7 @@ class Filter extends React.Component {
           <Hero className="Home" hero={heroImage} />
         </div>
         <div className="productHeader">
-          Visar {products.length} produkter
+          {products.length} products
         </div>
 
         <div className="productList">

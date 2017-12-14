@@ -15,7 +15,7 @@ class Product extends React.Component {
             </h2>
 
           <div className="description">
-            <h2> Product details</h2>
+            <h2>Product details</h2>
             {/* <h1 className="name2">
               {this.props.prodName}
             </h1> */}
@@ -54,7 +54,7 @@ class Product extends React.Component {
               }
               }
               className="button">
-              Köp
+              Buy
             </button>
           </div>
 
