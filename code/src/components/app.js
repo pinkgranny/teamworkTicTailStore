@@ -8,6 +8,7 @@ import Cart from "./Cart/cart"
 import Filter from "./Product/filterList"
 import ProductPage from "./Product/product-page"
 import Hamburger from "./Hamburger/hamburger"
+import ScrollToTop from "./ScrollToTop/index"
 
 class App extends React.Component {
 
@@ -78,77 +79,79 @@ class App extends React.Component {
     // }
     return (
       <BrowserRouter>
-        <div className="App">
-          <div className="header">
-            <div className="hamburger">
-              <Hamburger />
-            </div>
-            <div className="logo">
-              <img src="https://fontmeme.com/permalink/171213/4750a0456f68f7abc84237091a46ee42.png" alt="Store logotype" />
-            </div>
-
-            <input id="cartBox_id" type="checkbox" className="cartBox" />
-
-            <label className="cartButton1" htmlFor="cartBox_id">
-              <div className="cartButton" id="cartButtonId">
-                <i className="fa fa-shopping-cart" />
-                {this.state.cart.length} products
+        <ScrollToTop>
+          <div className="App">
+            <div className="header">
+              <div className="hamburger">
+                <Hamburger />
               </div>
-            </label>
-
-            <div className="cartList">
-              {this.state.cart.map(item =>
-                <Cart
-                  productId={item.productId} />)}
-              {this.state.cart.length > 0 &&
-                <div className="checkOutButtonContainer">
-                  <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
-                    Betala
-                  </div>
-                </div>}
-            </div>
-
-          </div>
-
-          <div className="page">
-
-            <div className="navigation">
-              <div className="storeName">
-                <Store logo={this.state.store.logotype[0].url} />
+              <div className="logo">
+                <img src="https://fontmeme.com/permalink/171213/4750a0456f68f7abc84237091a46ee42.png" alt="Store logotype" />
               </div>
-              <Categories />
+
+              <input id="cartBox_id" type="checkbox" className="cartBox" />
+
+              <label className="cartButton1" htmlFor="cartBox_id">
+                <div className="cartButton" id="cartButtonId">
+                  <i className="fa fa-shopping-cart" />
+                  {this.state.cart.length} products
+                </div>
+              </label>
+
+              <div className="cartList">
+                {this.state.cart.map(item =>
+                  <Cart
+                    productId={item.productId} />)}
+                {this.state.cart.length > 0 &&
+                  <div className="checkOutButtonContainer">
+                    <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
+                      Betala
+                    </div>
+                  </div>}
+              </div>
+
             </div>
 
-            <div className="productPage">
+            <div className="page">
 
-              <Route
-                exact
-                path="/"
-                render={routeProps =>
-                  <Filter
-                    {...routeProps}
-                    store={this.state.store}
-                    updateCart={this.updateCart.bind(this)} />
-                } />
-              <Route
-                exact
-                path="/:cate"
-                render={routeProps =>
-                  <Filter
-                    {...routeProps}
-                    store={this.state.store}
-                    updateCart={this.updateCart.bind(this)} />
-                } />
-              <Route
-                path="/products/:productPage"
-                render={routeProps =>
-                  <ProductPage
-                    {...routeProps}
-                    updateCart={this.updateCart.bind(this)} />
-                } />
+              <div className="navigation">
+                <div className="storeName">
+                  <Store logo={this.state.store.logotype[0].url} />
+                </div>
+                <Categories />
+              </div>
+
+              <div className="productPage">
+
+                <Route
+                  exact
+                  path="/"
+                  render={routeProps =>
+                    <Filter
+                      {...routeProps}
+                      store={this.state.store}
+                      updateCart={this.updateCart.bind(this)} />
+                  } />
+                <Route
+                  exact
+                  path="/:cate"
+                  render={routeProps =>
+                    <Filter
+                      {...routeProps}
+                      store={this.state.store}
+                      updateCart={this.updateCart.bind(this)} />
+                  } />
+                <Route
+                  path="/products/:productPage"
+                  render={routeProps =>
+                    <ProductPage
+                      {...routeProps}
+                      updateCart={this.updateCart.bind(this)} />
+                  } />
+              </div>
             </div>
           </div>
-        </div>
+        </ScrollToTop>
       </BrowserRouter>
     )
   }
