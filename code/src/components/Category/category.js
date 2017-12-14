@@ -12,7 +12,6 @@ class Category extends React.Component {
       <div className="oneCategory">
 
         <h2 className="category-navigation">
-          {/* <a href="url"> {this.props.title}</a> */}
           <Link onClick={this.props.onClick} className="link" to={`/${this.props.title}`}>{this.props.title}</Link>
         </h2>
 

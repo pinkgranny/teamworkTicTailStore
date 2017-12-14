@@ -25,11 +25,12 @@ class Hamburger extends React.Component {
 
   toggleNavigation() {
     const toggleMode = !this.state.navigationOpen
-    this.setState({ navigationOpen: toggleMode})
+    this.setState({ navigationOpen: toggleMode })
   }
 
   onClickLink() {
-    this.setState({ navigationOpen: false})
+    this.setState({ navigationOpen: false })
+    document.getElementById("hamburger-toggle").checked = false
   }
 
   render() {
