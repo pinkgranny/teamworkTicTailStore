@@ -22,7 +22,6 @@ class Cart extends React.Component {
 
   setProductFromApi = () => {
     const id = this.props.productId
-    // console.log(id)
     fetch(`https://api.tictail.com/v1.25/stores/5znv/products/${id}`).then((response) => {
       return response.json()
     }).then((json) => {
