@@ -70,6 +70,10 @@ a:hover {
   width: 20%;
 }
 
+a:link.sale h2 {
+  color: red;
+}
+
 .storeName {
   height: 300px;
   display: flex;
