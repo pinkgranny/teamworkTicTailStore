@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import Category from "./category"
-import "./category.css"
 
 class Categories extends React.Component {
   constructor(props) {
@@ -31,6 +30,9 @@ class Categories extends React.Component {
             title={item.title}
             count={item.product_count} />
         })}
+        <h2>
+          <Link className="link" to="/sale">Sale</Link>
+        </h2>
       </div>
     )
   }

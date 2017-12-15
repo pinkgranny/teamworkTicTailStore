@@ -46,7 +46,7 @@
   /*border: 1px solid #cacaca;*/
 }
 
-.oneProduct:last-child {
+.oneProduct:nth-last-child(1) {
   margin-right: 33.8%;
 }
 

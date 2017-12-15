@@ -54,6 +54,7 @@ class Hamburger extends React.Component {
                 title={item.title}
                 count={item.product_count} />
             })}
+            <Link onClick={this.onClickLink.bind(this)} className="link" to="/sale">Sale</Link>
           </h2>
         </div>
       </div>

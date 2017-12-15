@@ -69,10 +69,6 @@
   border-bottom-right-radius: 50px;
 }
 
-.hamburger .menu h2 {
-  margin-top: 20px;
-}
-
 .hamburger .menuIsOpen {
   left: -40px;
 }
