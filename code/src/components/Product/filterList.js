@@ -25,17 +25,14 @@ class Filter extends React.Component {
   }
 
   render() {
-    console.log("Store", this)
     const kategori = this.props.match.params.cate
     let { products } = this.state
-    console.log(products)
     let heroImage = this.props.store.wallpapers.iphone.url
     if (kategori) {
       if (kategori === "sale") {
         products = products.filter((product) => {
           return product.sale_active
         })
-        console.log('p', products)
       } else {
         products = products.filter((product) => {
           const categories = product.categories.map(category => category.title)
@@ -46,7 +43,6 @@ class Filter extends React.Component {
         heroImage = products[products.length - 1].images[0].url
       }
     }
-    console.log(this.state.products)
     return (
       <div className="productWrap">
         <div className="hero">

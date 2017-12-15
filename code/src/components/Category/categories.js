@@ -14,7 +14,6 @@ class Categories extends React.Component {
     fetch("https://api.tictail.com/v1.26/stores/5znv/categories").then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       this.setState({ categories: json })
     })
   }
@@ -24,13 +23,11 @@ class Categories extends React.Component {
       <div className="categories">
         <h2 className="category-navigation">
           <Link className="link" to="/">All products</Link>
-        </h2>
-        {this.state.categories.map((item) => {
-          return <Category
-            title={item.title}
-            count={item.product_count} />
-        })}
-        <h2>
+          {this.state.categories.map((item) => {
+            return <Category
+              title={item.title}
+              count={item.product_count} />
+          })}
           <Link className="link" to="/sale">Sale</Link>
         </h2>
       </div>

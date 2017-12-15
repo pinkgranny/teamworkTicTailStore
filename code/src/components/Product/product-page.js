@@ -27,11 +27,9 @@ export default class ProductPage extends React.Component {
 
   setProductFromApi = () => {
     const id = this.props.match.params.productPage
-    // console.log(id)
     fetch(`https://api.tictail.com/v1.25/stores/5znv/products/${id}`).then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       this.setState({ oneProduct: json })
     })
   }
@@ -50,7 +48,6 @@ export default class ProductPage extends React.Component {
 
           <div className="productBottom">
             <div className="price">
-              {/* {this.formatPrice(this.state.oneProduct.price)} */}
               <h5 className="realPrice">
                 {this.state.oneProduct.variations[0].sale_active === false &&
                   `${this.formatPrice(this.state.oneProduct.price)} kr`

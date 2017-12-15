@@ -29,13 +29,11 @@ class App extends React.Component {
     fetch("https://api.tictail.com/v1.26/stores/5znv").then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       this.setState({ store: json })
     })
   }
 
   updateCart(productId, variationId) {
-    console.log(productId, variationId)
     this.setState({
       cart: [...this.state.cart, {
         productId,
@@ -66,7 +64,6 @@ class App extends React.Component {
     }).then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       window.location.href = `https://www.tictail.com/checkout?cart_token=${json.token}`
     })
   }

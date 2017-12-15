@@ -18,7 +18,6 @@ class Hamburger extends React.Component {
     fetch("https://api.tictail.com/v1.26/stores/5znv/categories").then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       this.setState({ categories: json })
     })
   }
@@ -34,7 +33,6 @@ class Hamburger extends React.Component {
   }
 
   render() {
-    console.log(this.state.navigationOpen)
     return (
       <div className="Header">
         <input onClick={this.toggleNavigation.bind(this)} type="checkbox" id="hamburger-toggle" />

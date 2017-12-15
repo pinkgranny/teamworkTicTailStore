@@ -25,7 +25,6 @@ class Cart extends React.Component {
     fetch(`https://api.tictail.com/v1.25/stores/5znv/products/${id}`).then((response) => {
       return response.json()
     }).then((json) => {
-      console.log(json)
       this.setState({ oneProduct: json })
     })
   }

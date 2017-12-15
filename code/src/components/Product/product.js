@@ -14,15 +14,12 @@ class Product extends React.Component {
               {this.props.prodName}
             </h2>
 
-          <div className="description">
-            <h2>Product details</h2>
-            {/* <h1 className="name2">
-              {this.props.prodName}
-            </h1> */}
-            {this.props.prodDescription}
-          </div>
+            <div className="description">
+              <h2>Product details</h2>
+              {this.props.prodDescription}
+            </div>
 
-          <div className="imageHolder" style={{ backgroundImage: `url(${this.props.prodImage})` }} />
+            <div className="imageHolder" style={{ backgroundImage: `url(${this.props.prodImage})` }} />
           </Link>
         </div>
 
@@ -58,11 +55,6 @@ class Product extends React.Component {
             </button>
           </div>
 
-          {/* <div className="originalPrice">
-            {this.props.prodSale &&
-              `${this.props.prodOrgPrice} kr`
-            }
-          </div> */}
         </div>
 
       </div>
