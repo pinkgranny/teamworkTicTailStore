@@ -43,7 +43,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /*border: 1px solid #cacaca;*/
 }
 
 .oneProduct:nth-last-child(1) {
@@ -100,7 +99,7 @@
   display: inline;
 }
 .salePrice {
-  color: red
+  color: red;
 }
 
 .oneProductPage .price {
@@ -143,22 +142,7 @@
   justify-content: space-between;
   margin-bottom: 10%;
 }
-/*.oneProduct:hover .description {
-  display: block;
-  z-index: 3;
-}
 
-.oneProduct:hover .name {
-  display: none;
-}
-
-.oneProduct:hover .list {
-  display: none;
-}
-
-.oneProduct:hover .imageHolder {
-display: none;
-}*/
 @media (min-width: 600px) and (max-width: 1024px)  {
   .oneProductPage {
     width: 90%;

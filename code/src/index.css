@@ -70,10 +70,6 @@ a:hover {
   width: 20%;
 }
 
-a:link.sale h2 {
-  color: red;
-}
-
 .storeName {
   height: 300px;
   display: flex;
@@ -94,7 +90,6 @@ a:link.sale h2 {
 
   .page {
     width: 100%;
-    /*margin-left: 0;*/
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -117,6 +112,7 @@ a:link.sale h2 {
   .header {
     display: flex;
   }
+  
   .page {
     width: 100%;
     margin-left: 0;

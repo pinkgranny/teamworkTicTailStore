@@ -97,7 +97,7 @@ class App extends React.Component {
                 {this.state.cart.length > 0 &&
                   <div className="checkOutButtonContainer">
                     <div className="checkOutButton" onClick={this.goToCart.bind(this)}>
-                      Betala
+                      Check out
                     </div>
                   </div>}
               </div>
