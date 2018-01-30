@@ -2,7 +2,7 @@
   "name": "react-starter",
   "version": "1.2.2",
   "private": true,
-  "homepage": "https://pinkgranny.github.io/teamworkTicTailStore/",
+  "homepage": "https://pinkgranny.github.io/teamworkTicTailStore",
   "dependencies": {
     "classnames": "^2.2.5",
     "eslint-config-technigo": "^1.4.0",
