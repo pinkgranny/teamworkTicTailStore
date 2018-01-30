@@ -45,14 +45,14 @@ class Hamburger extends React.Component {
           "menuIsOpen": this.state.navigationOpen
         })}>
           <h2>
-            <Link onClick={this.onClickLink.bind(this)} className="link" to="/">All products</Link>
+            <Link onClick={this.onClickLink.bind(this)} className="link" to="/teamworkTicTailStore">All products</Link>
             {this.state.categories.map((item) => {
               return <Category
                 onClick={this.onClickLink.bind(this)}
                 title={item.title}
                 count={item.product_count} />
             })}
-            <Link onClick={this.onClickLink.bind(this)} className="link" to="/sale">Sale</Link>
+            <Link onClick={this.onClickLink.bind(this)} className="link" to="/teamworkTicTailStore/sale">Sale</Link>
           </h2>
         </div>
       </div>

@@ -12,7 +12,7 @@ class Store extends React.Component {
   render() {
     return (
       <div className="store">
-        <Link className="link" to="/">
+        <Link className="link" to="/teamworkTicTailStore/">
           <div className="image-logo" style={{ backgroundImage: `url(${this.props.logo})` }} />
         </Link>
       </div>

@@ -9,7 +9,7 @@ class Product extends React.Component {
       <div className="oneProduct">
 
         <div className="productTop">
-          <Link className="link" to={`/products/${this.props.prodId}`}>
+          <Link className="link" to={`/teamworkTicTailStore/products/${this.props.prodId}`}>
             <h2 className="product-name">
               {this.props.prodName}
             </h2>

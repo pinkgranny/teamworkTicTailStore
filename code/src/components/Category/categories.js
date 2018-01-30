@@ -22,13 +22,13 @@ class Categories extends React.Component {
     return (
       <div className="categories">
         <h2 className="category-navigation">
-          <Link className="link" to="/">All products</Link>
+          <Link className="link" to="/teamworkTicTailStore/">All products</Link>
           {this.state.categories.map((item) => {
             return <Category
               title={item.title}
               count={item.product_count} />
           })}
-          <Link className="link" to="/sale">Sale</Link>
+          <Link className="link" to="/teamworkTicTailStore/sale">Sale</Link>
         </h2>
       </div>
     )
