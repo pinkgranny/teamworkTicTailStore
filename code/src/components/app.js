@@ -117,7 +117,7 @@ class App extends React.Component {
 
                 <Route
                   exact
-                  path="/"
+                  path="/teamworkTicTailStore"
                   render={routeProps =>
                     <Filter
                       {...routeProps}
@@ -126,7 +126,7 @@ class App extends React.Component {
                   } />
                 <Route
                   exact
-                  path="/:cate"
+                  path="/teamworkTicTailStore/:cate"
                   render={routeProps =>
                     <Filter
                       {...routeProps}
@@ -134,7 +134,7 @@ class App extends React.Component {
                       updateCart={this.updateCart.bind(this)} />
                   } />
                 <Route
-                  path="/products/:productPage"
+                  path="/teamworkTicTailStore/products/:productPage"
                   render={routeProps =>
                     <ProductPage
                       {...routeProps}
