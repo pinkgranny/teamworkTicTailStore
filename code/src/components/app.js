@@ -117,6 +117,15 @@ class App extends React.Component {
 
                 <Route
                   exact
+                  path="/"
+                  render={routeProps =>
+                    <Filter
+                      {...routeProps}
+                      store={this.state.store}
+                      updateCart={this.updateCart.bind(this)} />
+                  } />
+                <Route
+                  exact
                   path="/teamworkTicTailStore"
                   render={routeProps =>
                     <Filter
